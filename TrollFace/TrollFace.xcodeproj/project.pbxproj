@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8413366418036BF6003FAC97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366318036BF6003FAC97 /* Foundation.framework */; };
+		8413366618036BF6003FAC97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366518036BF6003FAC97 /* CoreGraphics.framework */; };
+		8413366818036BF6003FAC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366718036BF6003FAC97 /* UIKit.framework */; };
+		8413366E18036BF6003FAC97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8413366C18036BF6003FAC97 /* InfoPlist.strings */; };
+		8413367018036BF6003FAC97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413366F18036BF6003FAC97 /* main.m */; };
+		8413367418036BF6003FAC97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413367318036BF6003FAC97 /* AppDelegate.m */; };
+		8413367718036BF6003FAC97 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8413367518036BF6003FAC97 /* Main_iPhone.storyboard */; };
+		8413367A18036BF6003FAC97 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8413367818036BF6003FAC97 /* Main_iPad.storyboard */; };
+		8413367D18036BF6003FAC97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413367C18036BF6003FAC97 /* ViewController.m */; };
+		8413367F18036BF6003FAC97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8413367E18036BF6003FAC97 /* Images.xcassets */; };
+		8413368618036BF6003FAC97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413368518036BF6003FAC97 /* XCTest.framework */; };
+		8413368718036BF6003FAC97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366318036BF6003FAC97 /* Foundation.framework */; };
+		8413368818036BF7003FAC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366718036BF6003FAC97 /* UIKit.framework */; };
+		8413369018036BF7003FAC97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8413368E18036BF7003FAC97 /* InfoPlist.strings */; };
+		8413369218036BF7003FAC97 /* TrollFaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413369118036BF7003FAC97 /* TrollFaceTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8413368918036BF7003FAC97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8413365818036BF6003FAC97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8413365F18036BF6003FAC97;
+			remoteInfo = TrollFace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8413366018036BF6003FAC97 /* TrollFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrollFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8413366318036BF6003FAC97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8413366518036BF6003FAC97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8413366718036BF6003FAC97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8413366B18036BF6003FAC97 /* TrollFace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrollFace-Info.plist"; sourceTree = "<group>"; };
+		8413366D18036BF6003FAC97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8413366F18036BF6003FAC97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8413367118036BF6003FAC97 /* TrollFace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrollFace-Prefix.pch"; sourceTree = "<group>"; };
+		8413367218036BF6003FAC97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8413367318036BF6003FAC97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8413367618036BF6003FAC97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		8413367918036BF6003FAC97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		8413367B18036BF6003FAC97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8413367C18036BF6003FAC97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8413367E18036BF6003FAC97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8413368418036BF6003FAC97 /* TrollFaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrollFaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8413368518036BF6003FAC97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8413368D18036BF7003FAC97 /* TrollFaceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrollFaceTests-Info.plist"; sourceTree = "<group>"; };
+		8413368F18036BF7003FAC97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8413369118036BF7003FAC97 /* TrollFaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrollFaceTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8413365D18036BF6003FAC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8413366618036BF6003FAC97 /* CoreGraphics.framework in Frameworks */,
+				8413366818036BF6003FAC97 /* UIKit.framework in Frameworks */,
+				8413366418036BF6003FAC97 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8413368118036BF6003FAC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8413368618036BF6003FAC97 /* XCTest.framework in Frameworks */,
+				8413368818036BF7003FAC97 /* UIKit.framework in Frameworks */,
+				8413368718036BF6003FAC97 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8413365718036BF6003FAC97 = {
+			isa = PBXGroup;
+			children = (
+				8413366918036BF6003FAC97 /* TrollFace */,
+				8413368B18036BF7003FAC97 /* TrollFaceTests */,
+				8413366218036BF6003FAC97 /* Frameworks */,
+				8413366118036BF6003FAC97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8413366118036BF6003FAC97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8413366018036BF6003FAC97 /* TrollFace.app */,
+				8413368418036BF6003FAC97 /* TrollFaceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8413366218036BF6003FAC97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8413366318036BF6003FAC97 /* Foundation.framework */,
+				8413366518036BF6003FAC97 /* CoreGraphics.framework */,
+				8413366718036BF6003FAC97 /* UIKit.framework */,
+				8413368518036BF6003FAC97 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8413366918036BF6003FAC97 /* TrollFace */ = {
+			isa = PBXGroup;
+			children = (
+				8413367218036BF6003FAC97 /* AppDelegate.h */,
+				8413367318036BF6003FAC97 /* AppDelegate.m */,
+				8413367518036BF6003FAC97 /* Main_iPhone.storyboard */,
+				8413367818036BF6003FAC97 /* Main_iPad.storyboard */,
+				8413367B18036BF6003FAC97 /* ViewController.h */,
+				8413367C18036BF6003FAC97 /* ViewController.m */,
+				8413367E18036BF6003FAC97 /* Images.xcassets */,
+				8413366A18036BF6003FAC97 /* Supporting Files */,
+			);
+			path = TrollFace;
+			sourceTree = "<group>";
+		};
+		8413366A18036BF6003FAC97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8413366B18036BF6003FAC97 /* TrollFace-Info.plist */,
+				8413366C18036BF6003FAC97 /* InfoPlist.strings */,
+				8413366F18036BF6003FAC97 /* main.m */,
+				8413367118036BF6003FAC97 /* TrollFace-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8413368B18036BF7003FAC97 /* TrollFaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				8413369118036BF7003FAC97 /* TrollFaceTests.m */,
+				8413368C18036BF7003FAC97 /* Supporting Files */,
+			);
+			path = TrollFaceTests;
+			sourceTree = "<group>";
+		};
+		8413368C18036BF7003FAC97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8413368D18036BF7003FAC97 /* TrollFaceTests-Info.plist */,
+				8413368E18036BF7003FAC97 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8413365F18036BF6003FAC97 /* TrollFace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8413369518036BF7003FAC97 /* Build configuration list for PBXNativeTarget "TrollFace" */;
+			buildPhases = (
+				8413365C18036BF6003FAC97 /* Sources */,
+				8413365D18036BF6003FAC97 /* Frameworks */,
+				8413365E18036BF6003FAC97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrollFace;
+			productName = TrollFace;
+			productReference = 8413366018036BF6003FAC97 /* TrollFace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8413368318036BF6003FAC97 /* TrollFaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8413369818036BF7003FAC97 /* Build configuration list for PBXNativeTarget "TrollFaceTests" */;
+			buildPhases = (
+				8413368018036BF6003FAC97 /* Sources */,
+				8413368118036BF6003FAC97 /* Frameworks */,
+				8413368218036BF6003FAC97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8413368A18036BF7003FAC97 /* PBXTargetDependency */,
+			);
+			name = TrollFaceTests;
+			productName = TrollFaceTests;
+			productReference = 8413368418036BF6003FAC97 /* TrollFaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8413365818036BF6003FAC97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = dmytro.nosulich;
+				TargetAttributes = {
+					8413368318036BF6003FAC97 = {
+						TestTargetID = 8413365F18036BF6003FAC97;
+					};
+				};
+			};
+			buildConfigurationList = 8413365B18036BF6003FAC97 /* Build configuration list for PBXProject "TrollFace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8413365718036BF6003FAC97;
+			productRefGroup = 8413366118036BF6003FAC97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8413365F18036BF6003FAC97 /* TrollFace */,
+				8413368318036BF6003FAC97 /* TrollFaceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8413365E18036BF6003FAC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8413367A18036BF6003FAC97 /* Main_iPad.storyboard in Resources */,
+				8413367F18036BF6003FAC97 /* Images.xcassets in Resources */,
+				8413367718036BF6003FAC97 /* Main_iPhone.storyboard in Resources */,
+				8413366E18036BF6003FAC97 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8413368218036BF6003FAC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8413369018036BF7003FAC97 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8413365C18036BF6003FAC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8413367D18036BF6003FAC97 /* ViewController.m in Sources */,
+				8413367418036BF6003FAC97 /* AppDelegate.m in Sources */,
+				8413367018036BF6003FAC97 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8413368018036BF6003FAC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8413369218036BF7003FAC97 /* TrollFaceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8413368A18036BF7003FAC97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8413365F18036BF6003FAC97 /* TrollFace */;
+			targetProxy = 8413368918036BF7003FAC97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8413366C18036BF6003FAC97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8413366D18036BF6003FAC97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8413367518036BF6003FAC97 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8413367618036BF6003FAC97 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		8413367818036BF6003FAC97 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8413367918036BF6003FAC97 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		8413368E18036BF7003FAC97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8413368F18036BF7003FAC97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8413369318036BF7003FAC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8413369418036BF7003FAC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8413369618036BF7003FAC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrollFace/TrollFace-Prefix.pch";
+				INFOPLIST_FILE = "TrollFace/TrollFace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8413369718036BF7003FAC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrollFace/TrollFace-Prefix.pch";
+				INFOPLIST_FILE = "TrollFace/TrollFace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8413369918036BF7003FAC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrollFace.app/TrollFace";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrollFace/TrollFace-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TrollFaceTests/TrollFaceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8413369A18036BF7003FAC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrollFace.app/TrollFace";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrollFace/TrollFace-Prefix.pch";
+				INFOPLIST_FILE = "TrollFaceTests/TrollFaceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8413365B18036BF6003FAC97 /* Build configuration list for PBXProject "TrollFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8413369318036BF7003FAC97 /* Debug */,
+				8413369418036BF7003FAC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8413369518036BF7003FAC97 /* Build configuration list for PBXNativeTarget "TrollFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8413369618036BF7003FAC97 /* Debug */,
+				8413369718036BF7003FAC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8413369818036BF7003FAC97 /* Build configuration list for PBXNativeTarget "TrollFaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8413369918036BF7003FAC97 /* Debug */,
+				8413369A18036BF7003FAC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8413365818036BF6003FAC97 /* Project object */;
+}
