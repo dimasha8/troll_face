@@ -5,36 +5,46 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B209E048-0240-497E-9512-CA79D086E0A2</string>
+	<string>1A65027D-95EB-4DF2-B542-4B56D7AB8029</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TrollFace</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E1639503-F2B0-4F8F-8A69-9A701797395A</key>
-		<string>https://91.228.126.168:8443/svn/PaperAct/trunk/PaperAct</string>
+		<key>57C38D2C-BB96-4B20-8319-E5BA7856349D</key>
+		<string>https://github.com/dimasha8/troll_face.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TrollFace/TrollFace/TrollFace.xcodeproj/project.xcworkspace</string>
+	<string>troll_face/TrollFace/TrollFace.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E1639503-F2B0-4F8F-8A69-9A701797395A</key>
+		<key>57C38D2C-BB96-4B20-8319-E5BA7856349D</key>
+		<string>../../..</string>
+		<key>94A48C66-E2BA-47C9-8F2F-BE5A2934FCE4</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://91.228.126.168:8443/svn/PaperAct/trunk/PaperAct/TrollFace/TrollFace/TrollFace.xcodeproj</string>
+	<string>https://github.com/dimasha8/troll_face.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E1639503-F2B0-4F8F-8A69-9A701797395A</string>
+	<string>94A48C66-E2BA-47C9-8F2F-BE5A2934FCE4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E1639503-F2B0-4F8F-8A69-9A701797395A</string>
+			<string>94A48C66-E2BA-47C9-8F2F-BE5A2934FCE4</string>
 			<key>IDESourceControlWCCName</key>
-			<string>TrollFace</string>
+			<string>HomeWork</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>57C38D2C-BB96-4B20-8319-E5BA7856349D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>troll_face</string>
 		</dict>
 	</array>
 </dict>

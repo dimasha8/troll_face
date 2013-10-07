@@ -22,6 +22,14 @@
 		8413368818036BF7003FAC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366718036BF6003FAC97 /* UIKit.framework */; };
 		8413369018036BF7003FAC97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8413368E18036BF7003FAC97 /* InfoPlist.strings */; };
 		8413369218036BF7003FAC97 /* TrollFaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413369118036BF7003FAC97 /* TrollFaceTests.m */; };
+		84E4954C18037CCE007B8E29 /* TFCreateNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4954A18037CCE007B8E29 /* TFCreateNewViewController.m */; };
+		84E4954D18037CCE007B8E29 /* TFCreateNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E4954B18037CCE007B8E29 /* TFCreateNewViewController.xib */; };
+		84E4955118037CF6007B8E29 /* TFImageBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4954F18037CF6007B8E29 /* TFImageBrowseViewController.m */; };
+		84E4955218037CF6007B8E29 /* TFImageBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E4955018037CF6007B8E29 /* TFImageBrowseViewController.xib */; };
+		84E4955618037D18007B8E29 /* TFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4955418037D18007B8E29 /* TFSettingsViewController.m */; };
+		84E4955718037D18007B8E29 /* TFSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E4955518037D18007B8E29 /* TFSettingsViewController.xib */; };
+		84E4955B18037D30007B8E29 /* TFHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4955918037D30007B8E29 /* TFHelpViewController.m */; };
+		84E4955C18037D30007B8E29 /* TFHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E4955A18037D30007B8E29 /* TFHelpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,19 @@
 		8413368D18036BF7003FAC97 /* TrollFaceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrollFaceTests-Info.plist"; sourceTree = "<group>"; };
 		8413368F18036BF7003FAC97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8413369118036BF7003FAC97 /* TrollFaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrollFaceTests.m; sourceTree = "<group>"; };
+		84E4954918037CCE007B8E29 /* TFCreateNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFCreateNewViewController.h; path = CreateNewViewController/TFCreateNewViewController.h; sourceTree = "<group>"; };
+		84E4954A18037CCE007B8E29 /* TFCreateNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFCreateNewViewController.m; path = CreateNewViewController/TFCreateNewViewController.m; sourceTree = "<group>"; };
+		84E4954B18037CCE007B8E29 /* TFCreateNewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFCreateNewViewController.xib; path = CreateNewViewController/TFCreateNewViewController.xib; sourceTree = "<group>"; };
+		84E4954E18037CF6007B8E29 /* TFImageBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFImageBrowseViewController.h; path = ImageBrowseViewController/TFImageBrowseViewController.h; sourceTree = "<group>"; };
+		84E4954F18037CF6007B8E29 /* TFImageBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFImageBrowseViewController.m; path = ImageBrowseViewController/TFImageBrowseViewController.m; sourceTree = "<group>"; };
+		84E4955018037CF6007B8E29 /* TFImageBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFImageBrowseViewController.xib; path = ImageBrowseViewController/TFImageBrowseViewController.xib; sourceTree = "<group>"; };
+		84E4955318037D18007B8E29 /* TFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFSettingsViewController.h; path = SettingsViewController/TFSettingsViewController.h; sourceTree = "<group>"; };
+		84E4955418037D18007B8E29 /* TFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFSettingsViewController.m; path = SettingsViewController/TFSettingsViewController.m; sourceTree = "<group>"; };
+		84E4955518037D18007B8E29 /* TFSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFSettingsViewController.xib; path = SettingsViewController/TFSettingsViewController.xib; sourceTree = "<group>"; };
+		84E4955818037D30007B8E29 /* TFHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHelpViewController.h; path = HelpViewController/TFHelpViewController.h; sourceTree = "<group>"; };
+		84E4955918037D30007B8E29 /* TFHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHelpViewController.m; path = HelpViewController/TFHelpViewController.m; sourceTree = "<group>"; };
+		84E4955A18037D30007B8E29 /* TFHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFHelpViewController.xib; path = HelpViewController/TFHelpViewController.xib; sourceTree = "<group>"; };
+		84E4955D180380EE007B8E29 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +135,13 @@
 		8413366918036BF6003FAC97 /* TrollFace */ = {
 			isa = PBXGroup;
 			children = (
+				84E4954318037C0F007B8E29 /* Social */,
+				84E4954218037BFB007B8E29 /* CustomComponents */,
+				84E4954118037BEF007B8E29 /* ViewControllers */,
 				8413367218036BF6003FAC97 /* AppDelegate.h */,
 				8413367318036BF6003FAC97 /* AppDelegate.m */,
 				8413367518036BF6003FAC97 /* Main_iPhone.storyboard */,
 				8413367818036BF6003FAC97 /* Main_iPad.storyboard */,
-				8413367B18036BF6003FAC97 /* ViewController.h */,
-				8413367C18036BF6003FAC97 /* ViewController.m */,
 				8413367E18036BF6003FAC97 /* Images.xcassets */,
 				8413366A18036BF6003FAC97 /* Supporting Files */,
 			);
@@ -133,6 +155,7 @@
 				8413366C18036BF6003FAC97 /* InfoPlist.strings */,
 				8413366F18036BF6003FAC97 /* main.m */,
 				8413367118036BF6003FAC97 /* TrollFace-Prefix.pch */,
+				84E4955D180380EE007B8E29 /* Global.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -153,6 +176,81 @@
 				8413368E18036BF7003FAC97 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84E4954118037BEF007B8E29 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84E4954818037C6C007B8E29 /* HelpViewController */,
+				84E4954718037C5D007B8E29 /* SettingsViewController */,
+				84E4954618037C49007B8E29 /* ImageBrowserViewController */,
+				84E4954518037C35007B8E29 /* CreateNewViewController */,
+				84E4954418037C27007B8E29 /* MainViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84E4954218037BFB007B8E29 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomComponents;
+			sourceTree = "<group>";
+		};
+		84E4954318037C0F007B8E29 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Social;
+			sourceTree = "<group>";
+		};
+		84E4954418037C27007B8E29 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8413367B18036BF6003FAC97 /* ViewController.h */,
+				8413367C18036BF6003FAC97 /* ViewController.m */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		84E4954518037C35007B8E29 /* CreateNewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E4954918037CCE007B8E29 /* TFCreateNewViewController.h */,
+				84E4954A18037CCE007B8E29 /* TFCreateNewViewController.m */,
+				84E4954B18037CCE007B8E29 /* TFCreateNewViewController.xib */,
+			);
+			name = CreateNewViewController;
+			sourceTree = "<group>";
+		};
+		84E4954618037C49007B8E29 /* ImageBrowserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E4954E18037CF6007B8E29 /* TFImageBrowseViewController.h */,
+				84E4954F18037CF6007B8E29 /* TFImageBrowseViewController.m */,
+				84E4955018037CF6007B8E29 /* TFImageBrowseViewController.xib */,
+			);
+			name = ImageBrowserViewController;
+			sourceTree = "<group>";
+		};
+		84E4954718037C5D007B8E29 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E4955318037D18007B8E29 /* TFSettingsViewController.h */,
+				84E4955418037D18007B8E29 /* TFSettingsViewController.m */,
+				84E4955518037D18007B8E29 /* TFSettingsViewController.xib */,
+			);
+			name = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		84E4954818037C6C007B8E29 /* HelpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E4955818037D30007B8E29 /* TFHelpViewController.h */,
+				84E4955918037D30007B8E29 /* TFHelpViewController.m */,
+				84E4955A18037D30007B8E29 /* TFHelpViewController.xib */,
+			);
+			name = HelpViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8413367A18036BF6003FAC97 /* Main_iPad.storyboard in Resources */,
+				84E4954D18037CCE007B8E29 /* TFCreateNewViewController.xib in Resources */,
 				8413367F18036BF6003FAC97 /* Images.xcassets in Resources */,
 				8413367718036BF6003FAC97 /* Main_iPhone.storyboard in Resources */,
+				84E4955218037CF6007B8E29 /* TFImageBrowseViewController.xib in Resources */,
+				84E4955718037D18007B8E29 /* TFSettingsViewController.xib in Resources */,
 				8413366E18036BF6003FAC97 /* InfoPlist.strings in Resources */,
+				84E4955C18037D30007B8E29 /* TFHelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +356,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8413367D18036BF6003FAC97 /* ViewController.m in Sources */,
+				84E4954C18037CCE007B8E29 /* TFCreateNewViewController.m in Sources */,
+				84E4955118037CF6007B8E29 /* TFImageBrowseViewController.m in Sources */,
+				84E4955618037D18007B8E29 /* TFSettingsViewController.m in Sources */,
+				84E4955B18037D30007B8E29 /* TFHelpViewController.m in Sources */,
 				8413367418036BF6003FAC97 /* AppDelegate.m in Sources */,
 				8413367018036BF6003FAC97 /* main.m in Sources */,
 			);
@@ -346,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -474,6 +580,7 @@
 				8413369718036BF7003FAC97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8413369818036BF7003FAC97 /* Build configuration list for PBXNativeTarget "TrollFaceTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +589,7 @@
 				8413369A18036BF7003FAC97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
