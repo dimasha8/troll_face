@@ -39,20 +39,28 @@
 #pragma mark - IB actions
 - (IBAction)navigationButtonPressed:(UIButton *)pSender {
     switch (pSender.tag) {
-        case 0: //Create new button
-            
+        case 0: {//Create new button
+            TFCreateNewViewController *lController = [[TFCreateNewViewController alloc] initWithNibName:@"TFAbstractViewController" bundle:nil];
+            [self.navigationController pushViewController:lController animated:YES];
+        }
             break;
             
-        case 1://show created mems button
-            
+        case 1: {//show created mems button
+            TFImageBrowseViewController *lController = [[TFImageBrowseViewController alloc] initWithNibName:@"TFImageBrowseViewController" bundle:nil];
+            [self.navigationController pushViewController:lController animated:YES];
+        }
             break;
             
-        case 2://settings button
-            
+        case 2: {//settings button
+            TFSettingsViewController *lController = [[TFSettingsViewController alloc] initWithNibName:@"TFSettingsViewController" bundle:nil];
+            [self.navigationController pushViewController:lController animated:YES];
+        }
             break;
             
-        case 3://help button
-            
+        case 3: {//help button
+            TFHelpViewController *lController = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
+            [self.navigationController pushViewController:lController animated:YES];
+        }
             break;
             
         default:

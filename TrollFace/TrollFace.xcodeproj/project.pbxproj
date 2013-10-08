@@ -30,6 +30,7 @@
 		84E4955718037D18007B8E29 /* TFSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E4955518037D18007B8E29 /* TFSettingsViewController.xib */; };
 		84E4955B18037D30007B8E29 /* TFHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4955918037D30007B8E29 /* TFHelpViewController.m */; };
 		84E4955C18037D30007B8E29 /* TFHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E4955A18037D30007B8E29 /* TFHelpViewController.xib */; };
+		84E49561180381E9007B8E29 /* TFAbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E49560180381E9007B8E29 /* TFAbstractViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		84E4955918037D30007B8E29 /* TFHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHelpViewController.m; path = HelpViewController/TFHelpViewController.m; sourceTree = "<group>"; };
 		84E4955A18037D30007B8E29 /* TFHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFHelpViewController.xib; path = HelpViewController/TFHelpViewController.xib; sourceTree = "<group>"; };
 		84E4955D180380EE007B8E29 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		84E4955F180381E9007B8E29 /* TFAbstractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFAbstractViewController.h; path = TFAbstractViewController/TFAbstractViewController.h; sourceTree = "<group>"; };
+		84E49560180381E9007B8E29 /* TFAbstractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFAbstractViewController.m; path = TFAbstractViewController/TFAbstractViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,7 @@
 		84E4954118037BEF007B8E29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84E4955E180381AC007B8E29 /* TFAbstractViewController */,
 				84E4954818037C6C007B8E29 /* HelpViewController */,
 				84E4954718037C5D007B8E29 /* SettingsViewController */,
 				84E4954618037C49007B8E29 /* ImageBrowserViewController */,
@@ -251,6 +255,15 @@
 				84E4955A18037D30007B8E29 /* TFHelpViewController.xib */,
 			);
 			name = HelpViewController;
+			sourceTree = "<group>";
+		};
+		84E4955E180381AC007B8E29 /* TFAbstractViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E4955F180381E9007B8E29 /* TFAbstractViewController.h */,
+				84E49560180381E9007B8E29 /* TFAbstractViewController.m */,
+			);
+			name = TFAbstractViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +370,7 @@
 			files = (
 				8413367D18036BF6003FAC97 /* ViewController.m in Sources */,
 				84E4954C18037CCE007B8E29 /* TFCreateNewViewController.m in Sources */,
+				84E49561180381E9007B8E29 /* TFAbstractViewController.m in Sources */,
 				84E4955118037CF6007B8E29 /* TFImageBrowseViewController.m in Sources */,
 				84E4955618037D18007B8E29 /* TFSettingsViewController.m in Sources */,
 				84E4955B18037D30007B8E29 /* TFHelpViewController.m in Sources */,

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TFAbstractViewController.h"
 
-@interface TFCreateNewViewController : UIViewController
+@interface TFCreateNewViewController : TFAbstractViewController
 
 @end

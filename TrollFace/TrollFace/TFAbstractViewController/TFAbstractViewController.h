@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.h
+//  TFAbstractViewController.h
 //  TrollFace
 //
 //  Created by dmytro.nosulich on 10/8/13.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TFAbstractViewController.h"
 
-@interface TFSettingsViewController : TFAbstractViewController
+@interface TFAbstractViewController : UIViewController
 
 @end
