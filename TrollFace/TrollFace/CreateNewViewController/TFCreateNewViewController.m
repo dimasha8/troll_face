@@ -6,14 +6,23 @@
 //  Copyright (c) 2013 dmytro.nosulich. All rights reserved.
 //
 
+typedef enum {
+    Camera = 0,
+    Library,
+    Social,
+    Pattern,
+    Google,
+}LoadButtonIndex;
+
 #import "TFCreateNewViewController.h"
 
 @interface TFCreateNewViewController ()
-
+- (IBAction)loadImagePressed:(UIButton *)pSender;
 @end
 
 @implementation TFCreateNewViewController
 
+#pragma mark - Life cicle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,6 +42,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IB actions
+- (void)loadImagePressed:(UIButton *)pSender {
+    switch (pSender.tag) {
+        case Camera:
+            
+            break;
+            
+        case Library:
+            
+            break;
+            
+        case Social:
+            
+            break;
+            
+        case Pattern:
+            
+            break;
+            
+        case Google:
+            
+            break;
+            
+            
+        default:
+            break;
+    }
 }
 
 @end
