@@ -40,7 +40,7 @@
 - (IBAction)navigationButtonPressed:(UIButton *)pSender {
     switch (pSender.tag) {
         case 0: {//Create new button
-            TFCreateNewViewController *lController = [[TFCreateNewViewController alloc] initWithNibName:@"TFAbstractViewController" bundle:nil];
+            TFCreateNewViewController *lController = [[TFCreateNewViewController alloc] initWithNibName:@"TFCreateNewViewController" bundle:nil];
             [self.navigationController pushViewController:lController animated:YES];
         }
             break;

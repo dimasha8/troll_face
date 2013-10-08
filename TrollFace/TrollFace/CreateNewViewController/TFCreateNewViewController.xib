@@ -21,6 +21,9 @@
                     <state key="normal" title="Camera">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="loadImagePressed:" destination="-1" eventType="touchUpInside" id="sEc-na-GjK"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFp-tz-U1c">
                     <rect key="frame" x="107" y="144" width="106" height="30"/>

@@ -46,6 +46,10 @@ typedef enum {
 
 #pragma mark - IB actions
 - (void)loadImagePressed:(UIButton *)pSender {
+    PhotoPickerViewController *lPhotoController = [PhotoPickerViewController new];
+    [lPhotoController setDelegate:self];
+    [self presentViewController:lPhotoController animated:YES completion:nil];
+    
     switch (pSender.tag) {
         case Camera:
             
@@ -71,6 +75,27 @@ typedef enum {
         default:
             break;
     }
+}
+
+#pragma mark - PhotoPickerViewControllerDelegate
+/**
+ Called when the user had finished picking and had selected one asset.
+ */
+- (void)imagePickerController:(PhotoPickerViewController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    DLog(@"infp: %@", info);
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+/**
+ Called when the user had finished picking and had selected multiple assets, which are returned in an array.
+ */
+- (void)imagePickerController:(PhotoPickerViewController *)picker didFinishPickingArrayOfMediaWithInfo:(NSArray *)info {
+    
+}
+/**
+ Called when the user canceled the picking.
+ */
+- (void)imagePickerControllerDidCancel:(PhotoPickerViewController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

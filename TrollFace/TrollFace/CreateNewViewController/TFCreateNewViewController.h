@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TFAbstractViewController.h"
+#import "PhotoPickerViewController.h"
 
-@interface TFCreateNewViewController : TFAbstractViewController
+@interface TFCreateNewViewController : TFAbstractViewController <PhotoPickerViewControllerDelegate, UINavigationControllerDelegate>
 
 @end
