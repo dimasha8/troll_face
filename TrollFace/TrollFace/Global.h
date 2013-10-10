@@ -6,6 +6,8 @@
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
+#define PHOTO_ALBUM @"Troll friends"
+
 #ifndef Global_h
 #define Global_h
 

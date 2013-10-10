@@ -9,7 +9,7 @@
 #import "TFSettingsViewController.h"
 
 @interface TFSettingsViewController ()
-
+- (IBAction)buttonPressed:(id)sender;
 @end
 
 @implementation TFSettingsViewController
@@ -33,6 +33,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)buttonPressed:(id)sender {
+
 }
 
 @end

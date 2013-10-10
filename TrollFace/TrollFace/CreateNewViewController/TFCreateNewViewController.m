@@ -15,6 +15,7 @@ typedef enum {
 }LoadButtonIndex;
 
 #import "TFCreateNewViewController.h"
+#import "Settings.h"
 
 @interface TFCreateNewViewController ()
 - (IBAction)loadImagePressed:(UIButton *)pSender;
@@ -82,7 +83,8 @@ typedef enum {
  Called when the user had finished picking and had selected one asset.
  */
 - (void)imagePickerController:(PhotoPickerViewController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    DLog(@"infp: %@", info);
+    DLog(@"image: %@", [info objectForKey:UIImagePickerControllerOriginalImage]);
+    [[Settings sharedSettings] saveImage:[info objectForKey:UIImagePickerControllerOriginalImage] forAlbum:PHOTO_ALBUM finished:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 /**

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8409E3381805FB0C00DAD11F /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8409E3371805FB0C00DAD11F /* Settings.m */; };
+		8409E33A1806062700DAD11F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8409E3391806062700DAD11F /* AVFoundation.framework */; };
+		8409E33C1806071B00DAD11F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8409E33B1806071B00DAD11F /* AssetsLibrary.framework */; };
 		8413366418036BF6003FAC97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366318036BF6003FAC97 /* Foundation.framework */; };
 		8413366618036BF6003FAC97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366518036BF6003FAC97 /* CoreGraphics.framework */; };
 		8413366818036BF6003FAC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366718036BF6003FAC97 /* UIKit.framework */; };
@@ -138,6 +141,7 @@
 		84471ED21804B3DF005BC4EF /* DCSimpleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84471EBF1804B3DF005BC4EF /* DCSimpleConverter.m */; };
 		84471ED61804B437005BC4EF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84471ED51804B437005BC4EF /* MBProgressHUD.m */; };
 		84471EDA1804B45A005BC4EF /* Lockbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 84471ED91804B45A005BC4EF /* Lockbox.m */; };
+		849F94EB1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F94EA1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		84E4954C18037CCE007B8E29 /* TFCreateNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4954A18037CCE007B8E29 /* TFCreateNewViewController.m */; };
 		84E4954D18037CCE007B8E29 /* TFCreateNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E4954B18037CCE007B8E29 /* TFCreateNewViewController.xib */; };
 		84E4955118037CF6007B8E29 /* TFImageBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4954F18037CF6007B8E29 /* TFImageBrowseViewController.m */; };
@@ -160,6 +164,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8409E3361805FB0C00DAD11F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Settings/Settings.h; sourceTree = "<group>"; };
+		8409E3371805FB0C00DAD11F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Settings/Settings.m; sourceTree = "<group>"; };
+		8409E3391806062700DAD11F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8409E33B1806071B00DAD11F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8413366018036BF6003FAC97 /* TrollFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrollFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8413366318036BF6003FAC97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8413366518036BF6003FAC97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -389,6 +397,8 @@
 		84471ED51804B437005BC4EF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		84471ED81804B45A005BC4EF /* Lockbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lockbox.h; sourceTree = "<group>"; };
 		84471ED91804B45A005BC4EF /* Lockbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lockbox.m; sourceTree = "<group>"; };
+		849F94E91807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALAssetsLibrary+CustomPhotoAlbum.h"; path = "CustomCategories/ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
+		849F94EA1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALAssetsLibrary+CustomPhotoAlbum.m"; path = "CustomCategories/ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
 		84E4954918037CCE007B8E29 /* TFCreateNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFCreateNewViewController.h; path = CreateNewViewController/TFCreateNewViewController.h; sourceTree = "<group>"; };
 		84E4954A18037CCE007B8E29 /* TFCreateNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFCreateNewViewController.m; path = CreateNewViewController/TFCreateNewViewController.m; sourceTree = "<group>"; };
 		84E4954B18037CCE007B8E29 /* TFCreateNewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFCreateNewViewController.xib; path = CreateNewViewController/TFCreateNewViewController.xib; sourceTree = "<group>"; };
@@ -411,6 +421,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8409E33C1806071B00DAD11F /* AssetsLibrary.framework in Frameworks */,
+				8409E33A1806062700DAD11F /* AVFoundation.framework in Frameworks */,
 				8413366618036BF6003FAC97 /* CoreGraphics.framework in Frameworks */,
 				8413366818036BF6003FAC97 /* UIKit.framework in Frameworks */,
 				8413366418036BF6003FAC97 /* Foundation.framework in Frameworks */,
@@ -430,6 +442,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8409E3351805FADD00DAD11F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8409E3361805FB0C00DAD11F /* Settings.h */,
+				8409E3371805FB0C00DAD11F /* Settings.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		8413365718036BF6003FAC97 = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +473,8 @@
 		8413366218036BF6003FAC97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8409E33B1806071B00DAD11F /* AssetsLibrary.framework */,
+				8409E3391806062700DAD11F /* AVFoundation.framework */,
 				8413366318036BF6003FAC97 /* Foundation.framework */,
 				8413366518036BF6003FAC97 /* CoreGraphics.framework */,
 				8413366718036BF6003FAC97 /* UIKit.framework */,
@@ -463,8 +486,9 @@
 		8413366918036BF6003FAC97 /* TrollFace */ = {
 			isa = PBXGroup;
 			children = (
+				849F94EC180747AD00104768 /* OtherSource */,
+				849F94E5180746BD00104768 /* Categories */,
 				84471D801804B1C1005BC4EF /* ChuteSDK */,
-				84E4954318037C0F007B8E29 /* Social */,
 				84E4954218037BFB007B8E29 /* CustomComponents */,
 				84E4954118037BEF007B8E29 /* ViewControllers */,
 				8413367218036BF6003FAC97 /* AppDelegate.h */,
@@ -867,6 +891,24 @@
 			name = Lockbox;
 			sourceTree = "<group>";
 		};
+		849F94E5180746BD00104768 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				849F94E91807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
+				849F94EA1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		849F94EC180747AD00104768 /* OtherSource */ = {
+			isa = PBXGroup;
+			children = (
+				8409E3351805FADD00DAD11F /* Settings */,
+				84E4954318037C0F007B8E29 /* Social */,
+			);
+			name = OtherSource;
+			sourceTree = "<group>";
+		};
 		84E4954118037BEF007B8E29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1127,6 +1169,7 @@
 				84471E5E1804B2F7005BC4EF /* GCAccount.m in Sources */,
 				84471E0C1804B1E4005BC4EF /* GCLoginView.m in Sources */,
 				84471DE41804B1E4005BC4EF /* GCServiceAlbum.m in Sources */,
+				8409E3381805FB0C00DAD11F /* Settings.m in Sources */,
 				84471DF11804B1E4005BC4EF /* GCComment.m in Sources */,
 				84471DF81804B1E4005BC4EF /* GCHeartCount.m in Sources */,
 				84471E931804B3C1005BC4EF /* AFHTTPRequestOperation.m in Sources */,
@@ -1174,6 +1217,7 @@
 				84471EC81804B3DF005BC4EF /* DCKeyValueObjectMapping.m in Sources */,
 				84471E7D1804B2F7005BC4EF /* PhotoPickerCell.m in Sources */,
 				84471DE21804B1E4005BC4EF /* GCOAuth2Client.m in Sources */,
+				849F94EB1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				84471E051804B1E4005BC4EF /* GCVoteCount.m in Sources */,
 				84471EC11804B3DF005BC4EF /* DCArrayMapping.m in Sources */,
 				84471DFA1804B1E4005BC4EF /* GCLinks.m in Sources */,
