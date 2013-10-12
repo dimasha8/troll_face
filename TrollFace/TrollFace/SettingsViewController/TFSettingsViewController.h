@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TFAbstractViewController.h"
+#import "TFAlertView.h"
 
-@interface TFSettingsViewController : TFAbstractViewController
+@interface TFSettingsViewController : TFAbstractViewController <TFAlertViewDelegare>
 
 @end

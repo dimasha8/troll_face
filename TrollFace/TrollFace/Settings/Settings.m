@@ -38,12 +38,14 @@
             DLog(@"writeImageToSavedPhotosAlbum  error: %@", error);
             if (error == nil) {
                 ALAssetsLibrary *lLibraryForAddURLs = [[ALAssetsLibrary alloc] init];
-                [lLibraryForAddURLs addAssetURL:assetURL toAlbum:PHOTO_ALBUM withCompletionBlock:^(NSError *error) {
-                    DLog(@"addAssetURL error: %@", error);
-                    if(finished != nil) {
-                        finished(error);
-                    }
-                }];
+                if(pString != nil) {//save image to path pString. Else it will be saved to camera roll
+                    [lLibraryForAddURLs addAssetURL:assetURL toAlbum:pString withCompletionBlock:^(NSError *error) {
+                        DLog(@"addAssetURL error: %@", error);
+                        if(finished != nil) {
+                            finished(error);
+                        }
+                    }];
+                }
             } else {
                 if(finished != nil) {
                     finished(error);

@@ -36,7 +36,12 @@
 }
 
 - (void)buttonPressed:(id)sender {
+    TFAlertView *lAlert = [[TFAlertView alloc] initWithTitle:@"TFAle dfgnbdfgtndfdfhdf df gdgf ndfg ndfgn dfng df rt" message:@"sorng ns dnsdlfindf ls dfgnd fgndgfhndgn dgt ng ndg nd gfnd gfnd nd n hgdfnlbsnb sldnb lsd" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"ooooo", @"ooo sdfv oo",@"oooodf do",@"ret ",nil];
+    [lAlert showAnimating:YES];
+}
 
+- (void)alertView:(NSInteger)pViewTag didSelectButtonAtIndex:(NSInteger)pButtonIndex {
+    DLog(@"button index: %i", pButtonIndex);
 }
 
 @end

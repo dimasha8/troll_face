@@ -17,7 +17,7 @@ typedef void(^ComplectionBlok)(NSError *error);
 //this method returns shared instance
 + (Settings *)sharedSettings;
 
-//use this method to save image. Block "finished" can be nil
+//use this method to save image. Block "finished" is called after seving imege, can be nil
 //pString is path where save image
 //if pString = nil image saves to camera roll
 - (void)saveImage:(UIImage *)pImage forAlbum:(NSString *)pString finished:(ComplectionBlok)finished;

@@ -6,11 +6,15 @@
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
+//AppDelegate
+#define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
 #define PHOTO_ALBUM @"Troll friends"
 
 #ifndef Global_h
 #define Global_h
 
+//debugging
 #ifdef DEBUG 
 # define DLog(...) NSLog(__VA_ARGS__) 
 #else 
@@ -18,12 +22,13 @@
 #endif 
 #define ALog(...) NSLog(__VA_ARGS__)
 
+#define SafeRelease(var_name) if (var_name != nil) [var_name release]; var_name = nil;
+
+//device info
 #define IPHONE @"iPhone"
 #define IPAD @"iPad"
 
 #define isDeviceIpad [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad
-
-#define SafeRelease(var_name) if (var_name != nil) [var_name release]; var_name = nil;
 
 //Getting is device IOS5
 CG_INLINE BOOL isIOS5()
@@ -46,8 +51,9 @@ CG_INLINE NSString *deviceType()
 	return IPHONE;
 #endif
 }
-//Size of shift when hiding and showing operationsview
-#define HorizontalShift 150
 
 #endif
+
+//other useful things
+#define degreesToRadians(x) ((x) * M_PI / 180.0)
 

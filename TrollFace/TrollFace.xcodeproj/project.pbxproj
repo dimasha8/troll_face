@@ -142,6 +142,9 @@
 		84471ED61804B437005BC4EF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84471ED51804B437005BC4EF /* MBProgressHUD.m */; };
 		84471EDA1804B45A005BC4EF /* Lockbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 84471ED91804B45A005BC4EF /* Lockbox.m */; };
 		849F94EB1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F94EA1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
+		84BD31C11809C79200D86F71 /* TFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BD31C01809C79200D86F71 /* TFAlertView.m */; };
+		84BD31C31809FDA700D86F71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C21809FDA700D86F71 /* QuartzCore.framework */; };
+		84BD31C51809FDB000D86F71 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C41809FDB000D86F71 /* Accelerate.framework */; };
 		84E4954C18037CCE007B8E29 /* TFCreateNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4954A18037CCE007B8E29 /* TFCreateNewViewController.m */; };
 		84E4954D18037CCE007B8E29 /* TFCreateNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E4954B18037CCE007B8E29 /* TFCreateNewViewController.xib */; };
 		84E4955118037CF6007B8E29 /* TFImageBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4954F18037CF6007B8E29 /* TFImageBrowseViewController.m */; };
@@ -399,6 +402,10 @@
 		84471ED91804B45A005BC4EF /* Lockbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lockbox.m; sourceTree = "<group>"; };
 		849F94E91807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALAssetsLibrary+CustomPhotoAlbum.h"; path = "CustomCategories/ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
 		849F94EA1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALAssetsLibrary+CustomPhotoAlbum.m"; path = "CustomCategories/ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
+		84BD31BF1809C79200D86F71 /* TFAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFAlertView.h; path = CustomComponents/TFAlertView/TFAlertView.h; sourceTree = "<group>"; };
+		84BD31C01809C79200D86F71 /* TFAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFAlertView.m; path = CustomComponents/TFAlertView/TFAlertView.m; sourceTree = "<group>"; };
+		84BD31C21809FDA700D86F71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		84BD31C41809FDB000D86F71 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		84E4954918037CCE007B8E29 /* TFCreateNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFCreateNewViewController.h; path = CreateNewViewController/TFCreateNewViewController.h; sourceTree = "<group>"; };
 		84E4954A18037CCE007B8E29 /* TFCreateNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFCreateNewViewController.m; path = CreateNewViewController/TFCreateNewViewController.m; sourceTree = "<group>"; };
 		84E4954B18037CCE007B8E29 /* TFCreateNewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFCreateNewViewController.xib; path = CreateNewViewController/TFCreateNewViewController.xib; sourceTree = "<group>"; };
@@ -421,6 +428,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BD31C51809FDB000D86F71 /* Accelerate.framework in Frameworks */,
+				84BD31C31809FDA700D86F71 /* QuartzCore.framework in Frameworks */,
 				8409E33C1806071B00DAD11F /* AssetsLibrary.framework in Frameworks */,
 				8409E33A1806062700DAD11F /* AVFoundation.framework in Frameworks */,
 				8413366618036BF6003FAC97 /* CoreGraphics.framework in Frameworks */,
@@ -473,6 +482,8 @@
 		8413366218036BF6003FAC97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84BD31C41809FDB000D86F71 /* Accelerate.framework */,
+				84BD31C21809FDA700D86F71 /* QuartzCore.framework */,
 				8409E33B1806071B00DAD11F /* AssetsLibrary.framework */,
 				8409E3391806062700DAD11F /* AVFoundation.framework */,
 				8413366318036BF6003FAC97 /* Foundation.framework */,
@@ -497,6 +508,7 @@
 				8413367818036BF6003FAC97 /* Main_iPad.storyboard */,
 				8413367E18036BF6003FAC97 /* Images.xcassets */,
 				8413366A18036BF6003FAC97 /* Supporting Files */,
+				84BD31BD1809C70700D86F71 /* Resources */,
 			);
 			path = TrollFace;
 			sourceTree = "<group>";
@@ -909,6 +921,30 @@
 			name = OtherSource;
 			sourceTree = "<group>";
 		};
+		84BD31BC1809BA9400D86F71 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				84BD31BF1809C79200D86F71 /* TFAlertView.h */,
+				84BD31C01809C79200D86F71 /* TFAlertView.m */,
+			);
+			name = AlertView;
+			sourceTree = "<group>";
+		};
+		84BD31BD1809C70700D86F71 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84BD31BE1809C73500D86F71 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		84BD31BE1809C73500D86F71 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		84E4954118037BEF007B8E29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -925,6 +961,7 @@
 		84E4954218037BFB007B8E29 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				84BD31BC1809BA9400D86F71 /* AlertView */,
 			);
 			name = CustomComponents;
 			sourceTree = "<group>";
@@ -1166,6 +1203,7 @@
 				84471DF61804B1E4005BC4EF /* GCFlagCount.m in Sources */,
 				84471E5D1804B2F7005BC4EF /* PhotoPickerViewController.m in Sources */,
 				84471E951804B3C1005BC4EF /* AFJSONRequestOperation.m in Sources */,
+				84BD31C11809C79200D86F71 /* TFAlertView.m in Sources */,
 				84471E5E1804B2F7005BC4EF /* GCAccount.m in Sources */,
 				84471E0C1804B1E4005BC4EF /* GCLoginView.m in Sources */,
 				84471DE41804B1E4005BC4EF /* GCServiceAlbum.m in Sources */,
