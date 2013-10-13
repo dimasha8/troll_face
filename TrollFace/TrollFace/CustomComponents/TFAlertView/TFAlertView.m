@@ -10,8 +10,6 @@
 #define EDGE_INSETS 5.0f
 #define BUTTON_HEIGHT 44.0f
 
-#define ANIMATION_DURATION 0.3f
-
 #import "TFAlertView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <Accelerate/Accelerate.h>
@@ -122,6 +120,7 @@
 
 #pragma mark -  Visibility methods
 - (void)showAnimating:(BOOL)pAnimating {
+    [self setBackgroundColor:[UIColor clearColor]];
     mBackGroundView = [[UIView alloc] initWithFrame:self.bounds];
     
     //set blurred background image

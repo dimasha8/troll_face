@@ -22,8 +22,6 @@
 #endif 
 #define ALog(...) NSLog(__VA_ARGS__)
 
-#define SafeRelease(var_name) if (var_name != nil) [var_name release]; var_name = nil;
-
 //device info
 #define IPHONE @"iPhone"
 #define IPAD @"iPad"
@@ -56,4 +54,8 @@ CG_INLINE NSString *deviceType()
 
 //other useful things
 #define degreesToRadians(x) ((x) * M_PI / 180.0)
+
+#define ANIMATION_DURATION 0.3f
+
+#define SafeRelease(var_name) if (var_name != nil) [var_name release]; var_name = nil;
 
