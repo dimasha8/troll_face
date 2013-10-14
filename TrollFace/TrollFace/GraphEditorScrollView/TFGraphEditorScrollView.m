@@ -14,11 +14,31 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self setUserInteractionEnabled:YES];
     }
     return self;
 }
 
+#pragma mark - scroll handlers
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView{
+    
+}
+
+
+#pragma mark - touch handlers
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

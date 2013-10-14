@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TFGraphEditorScrollView : UIScrollView
+@interface TFGraphEditorScrollView : UIScrollView<UIScrollViewDelegate>
 
 @end

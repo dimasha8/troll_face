@@ -145,6 +145,7 @@
 		8494F29B180C903600A5B091 /* TFGraphEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8494F299180C903500A5B091 /* TFGraphEditorViewController.m */; };
 		8494F29C180C903600A5B091 /* TFGraphEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8494F29A180C903500A5B091 /* TFGraphEditorViewController.xib */; };
 		8494F2A2180C932B00A5B091 /* TFCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8494F2A1180C932B00A5B091 /* TFCanvasView.m */; };
+		8494F2A5180C99BC00A5B091 /* TFGraphEditorScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8494F2A4180C99BC00A5B091 /* TFGraphEditorScrollView.m */; };
 		849F94EB1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F94EA1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		84BD31C11809C79200D86F71 /* TFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BD31C01809C79200D86F71 /* TFAlertView.m */; };
 		84BD31C31809FDA700D86F71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C21809FDA700D86F71 /* QuartzCore.framework */; };
@@ -411,6 +412,8 @@
 		8494F29A180C903500A5B091 /* TFGraphEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFGraphEditorViewController.xib; path = GraphEditorViewController/TFGraphEditorViewController.xib; sourceTree = "<group>"; };
 		8494F2A0180C932B00A5B091 /* TFCanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFCanvasView.h; path = CanvasView/TFCanvasView.h; sourceTree = "<group>"; };
 		8494F2A1180C932B00A5B091 /* TFCanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFCanvasView.m; path = CanvasView/TFCanvasView.m; sourceTree = "<group>"; };
+		8494F2A3180C99BC00A5B091 /* TFGraphEditorScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFGraphEditorScrollView.h; path = GraphEditorScrollView/TFGraphEditorScrollView.h; sourceTree = "<group>"; };
+		8494F2A4180C99BC00A5B091 /* TFGraphEditorScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFGraphEditorScrollView.m; path = GraphEditorScrollView/TFGraphEditorScrollView.m; sourceTree = "<group>"; };
 		849F94E91807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALAssetsLibrary+CustomPhotoAlbum.h"; path = "CustomCategories/ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
 		849F94EA1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALAssetsLibrary+CustomPhotoAlbum.m"; path = "CustomCategories/ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
 		84BD31BF1809C79200D86F71 /* TFAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFAlertView.h; path = CustomComponents/TFAlertView/TFAlertView.h; sourceTree = "<group>"; };
@@ -928,6 +931,7 @@
 			children = (
 				8494F29F180C931400A5B091 /* CanvasView */,
 				8494F29E180C916C00A5B091 /* GraphViewController */,
+				8494F2A6180C99C300A5B091 /* GraphEditorScrollView */,
 			);
 			name = GraphEditor;
 			sourceTree = "<group>";
@@ -949,6 +953,15 @@
 				8494F2A1180C932B00A5B091 /* TFCanvasView.m */,
 			);
 			name = CanvasView;
+			sourceTree = "<group>";
+		};
+		8494F2A6180C99C300A5B091 /* GraphEditorScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				8494F2A3180C99BC00A5B091 /* TFGraphEditorScrollView.h */,
+				8494F2A4180C99BC00A5B091 /* TFGraphEditorScrollView.m */,
+			);
+			name = GraphEditorScrollView;
 			sourceTree = "<group>";
 		};
 		849F94E5180746BD00104768 /* Categories */ = {
@@ -1222,6 +1235,7 @@
 				84471EC71804B3DF005BC4EF /* DCGenericConverter.m in Sources */,
 				84471E5A1804B2F7005BC4EF /* GCAlbumViewController.m in Sources */,
 				84E4954C18037CCE007B8E29 /* TFCreateNewViewController.m in Sources */,
+				8494F2A5180C99BC00A5B091 /* TFGraphEditorScrollView.m in Sources */,
 				84471E191804B2C0005BC4EF /* PhotoPickerClient.m in Sources */,
 				84471DFD1804B1E4005BC4EF /* GCResponseStatus.m in Sources */,
 				84E49561180381E9007B8E29 /* TFAbstractViewController.m in Sources */,

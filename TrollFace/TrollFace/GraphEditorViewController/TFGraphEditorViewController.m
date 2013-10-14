@@ -39,14 +39,15 @@ typedef enum {
         mScrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
         [mScrollView setContentSize:CGSizeMake(2*self.view.bounds.size.width, 2*self.view.bounds.size.height)];
         [mScrollView setContentOffset:CGPointMake(self.view.bounds.size.width, self.view.bounds.size.height)];
-        [mScrollView setIndicatorStyle:UIScrollViewIndicatorStyleBlack];
+        [mScrollView setBackgroundColor:[UIColor yellowColor]];
         
         
-        CGFloat lMargin = 5.0;
+        CGFloat lMargin = 50.0;
         TFCanvasView *lCanvasView = [[TFCanvasView alloc] initWithFrame:CGRectMake(lMargin, lMargin, SCREEN_SIZE.width-2*lMargin, SCREEN_SIZE.height-5*lMargin)];
+        [lCanvasView setBackgroundColor:[UIColor redColor]];
         [mScrollView addSubview:lCanvasView];
 
-        
+        [self.view addSubview:mScrollView];
         
     }
     return self;
@@ -72,6 +73,7 @@ typedef enum {
 
 - (void)showAllViews{
     [UIView animateWithDuration:0.5 animations:^{
+
         if (!panelsIsOnTheView) {
             
             mLeftView.alpha = 0.8;
@@ -98,7 +100,7 @@ typedef enum {
             panelsIsOnTheView = NO;
         }
     }completion:^(BOOL finished){
-        DLog(@"Done!");
+
         DLog(@"left:%@",NSStringFromCGRect(mLeftView.frame));
         DLog(@"right:%@",NSStringFromCGRect(mRightView.frame));
         DLog(@"top:%@",NSStringFromCGRect(mTopView.frame));

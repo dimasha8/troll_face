@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "TFAbstractViewController.h"
-
+#import "TFGraphEditorScrollView.h"
 
 @interface TFGraphEditorViewController : TFAbstractViewController<UIGestureRecognizerDelegate>{
     IBOutlet UIView *mTopView;
     IBOutlet UIView *mLeftView;
     IBOutlet UIView *mRightView;
-    UIScrollView *mScrollView;
+    TFGraphEditorScrollView *mScrollView;
 }
 
 @end
