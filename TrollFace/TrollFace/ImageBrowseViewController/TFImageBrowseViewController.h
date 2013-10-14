@@ -12,10 +12,12 @@
 
 @interface TFImageBrowseViewController : TFAbstractViewController <RNGridMenuDelegate> {
     IBOutlet UIView *mNavigationBar;
-    IBOutlet UIView *mContentView;
+    IBOutlet UIScrollView *mContentView;
     IBOutlet UIView *mToolBar;
     
     NSArray *mAssetsArray;
+    
+    NSInteger mShowedImageIndex;
 }
 
 //navigation bar actions

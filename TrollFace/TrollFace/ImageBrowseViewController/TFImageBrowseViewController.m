@@ -9,6 +9,7 @@
 #define NAVIGATIONBAR_TIME_VISIBLE 3.0
 
 #import "TFImageBrowseViewController.h"
+#import "UIImageView+Asset.h"
 
 @interface TFImageBrowseViewController ()
 
@@ -46,13 +47,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    mShowedImageIndex = 0;
+    
     [[Settings sharedSettings] getListOfPhotosInGroup:PHOTO_ALBUM complitionBlock:^(NSError *error, NSArray *imagesPath) {
         DLog(@"error: %@", error);
         if(error == nil) {
             if(imagesPath != nil) {
                 if(imagesPath.count != 0) {
                     mAssetsArray = [imagesPath copy];
-                    [self showImages];
+                    [self showImageAtIndex:mShowedImageIndex];
                 } else {//there isn't any image in group "Troll friends"
                     
                 }
@@ -94,9 +97,11 @@
     
 }
 
-
-- (void)showImages {
-    
+- (void)showImageAtIndex:(NSInteger)pIndex {
+    if(pIndex < mAssetsArray.count && pIndex >= 0) {
+        UIImageView *lCell = [[UIImageView alloc] initWithFrame:mContentView.bounds asset:[mAssetsArray objectAtIndex:pIndex]];
+        [mContentView addSubview:lCell];
+    }
 }
 
 #pragma mark - GridMenu
