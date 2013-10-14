@@ -14,6 +14,8 @@
     IBOutlet UIView *mNavigationBar;
     IBOutlet UIView *mContentView;
     IBOutlet UIView *mToolBar;
+    
+    NSArray *mAssetsArray;
 }
 
 //navigation bar actions

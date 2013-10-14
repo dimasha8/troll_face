@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 dmytro.nosulich. All rights reserved.
 //
 
+#define NAVIGATIONBAR_TIME_VISIBLE 3.0
+
 #import "TFImageBrowseViewController.h"
 
 @interface TFImageBrowseViewController ()
@@ -41,10 +43,32 @@
     [mContentView addGestureRecognizer:lPanGesture];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[Settings sharedSettings] getListOfPhotosInGroup:PHOTO_ALBUM complitionBlock:^(NSError *error, NSArray *imagesPath) {
+        DLog(@"error: %@", error);
+        if(error == nil) {
+            if(imagesPath != nil) {
+                if(imagesPath.count != 0) {
+                    mAssetsArray = [imagesPath copy];
+                    [self showImages];
+                } else {//there isn't any image in group "Troll friends"
+                    
+                }
+            } else {//group "Troll friends" didn't found
+                
+            }
+        } else {
+            DLog(@"images: %@", imagesPath);
+        }
+    }];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self performSelector:@selector(showHideNavigationBar:) withObject:(id)NO afterDelay:3];
+    [self performSelector:@selector(showHideNavigationBar:) withObject:(id)NO afterDelay:NAVIGATIONBAR_TIME_VISIBLE];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,12 +79,24 @@
 
 #pragma mark - Private methods
 - (void)showHideNavigationBar:(BOOL)pShow; {
-    NSTimeInterval lAnimationDuration = pShow?0.1:ANIMATION_DURATION;
+    NSTimeInterval lAnimationDuration = pShow?0.1:ANIMATION_DURATION + 0.5;
     [UIView animateWithDuration:lAnimationDuration animations:^{
         mNavigationBar.alpha = pShow?1.0:0.0;
     } completion:^(BOOL finished) {
         
     }];
+    
+    if(pShow) {
+        //hide navigations bar after NAVIGATIONBAR_TIME_VISIBLE
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showHideNavigationBar:) object:nil];
+        [self performSelector:@selector(showHideNavigationBar:) withObject:(id)NO afterDelay:NAVIGATIONBAR_TIME_VISIBLE];
+    }
+    
+}
+
+
+- (void)showImages {
+    
 }
 
 #pragma mark - GridMenu

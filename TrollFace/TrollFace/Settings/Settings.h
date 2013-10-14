@@ -22,4 +22,7 @@ typedef void(^ComplectionBlok)(NSError *error);
 //if pString = nil image saves to camera roll
 - (void)saveImage:(UIImage *)pImage forAlbum:(NSString *)pString finished:(ComplectionBlok)finished;
 
+//returns list of saved photos in app's photo album
+- (void)getListOfPhotosInGroup:(NSString *)pGtoup complitionBlock:(void(^)(NSError *error, NSArray *imagesPath))pBlock;
+
 @end

@@ -15,4 +15,6 @@
     #import <Foundation/Foundation.h>
     #import "Global.h"
     #import "AppDelegate.h"
+    #import "Settings.h"
+    #import "TFAlertView.h"
 #endif

@@ -31,6 +31,7 @@
 }
 
 #pragma mark - Publick methods
+#pragma mark - Work with images ALAssetsLibrary
 - (void)saveImage:(UIImage *)pImage forAlbum:(NSString *)pString finished:(ComplectionBlok)finished {
     if(pImage != nil) {
         ALAssetsLibrary *lLibrary = [[ALAssetsLibrary alloc] init];
@@ -54,5 +55,30 @@
         }];
     }
 }
+
+- (void)getListOfPhotosInGroup:(NSString *)pGtoup complitionBlock:(void(^)(NSError *error, NSArray *imagesPath))pBlock {
+    __block NSMutableArray *lPathes = nil;
+    //find Album
+    ALAssetsLibrary *lLibrary = [[ALAssetsLibrary alloc] init];
+    [lLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+        if ([[group valueForProperty:ALAssetsGroupPropertyName] isEqualToString:pGtoup]) {
+            lPathes = [NSMutableArray new];
+            //get images pathes
+            [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+                if(result != nil) {
+                    [lPathes addObject:result];
+                } else {
+                    pBlock(nil, lPathes);
+                }
+            }];
+            
+            *stop = YES;
+        }
+    } failureBlock:^(NSError *error) {
+        pBlock(error, lPathes);
+        DLog(@"error enumerateGroupsWithTypes: %@", error);
+    }];
+}
+
 
 @end
