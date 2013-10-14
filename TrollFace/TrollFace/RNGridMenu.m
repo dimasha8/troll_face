@@ -43,7 +43,6 @@ CGPoint RNCentroidOfTouchesInView(NSSet *touches, UIView *view) {
     // feel free to adjust jpeg quality (lower = higher perf)
     NSData *imageData = UIImageJPEGRepresentation(image, 0.75);
     image = [UIImage imageWithData:imageData];
-
     return image;
 }
 

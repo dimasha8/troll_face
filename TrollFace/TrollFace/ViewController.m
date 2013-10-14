@@ -12,6 +12,7 @@
 #import "TFImageBrowseViewController.h"
 #import "TFSettingsViewController.h"
 #import "TFHelpViewController.h"
+#import "TFGraphEditorViewController.h"
 
 @interface ViewController ()
 - (IBAction)navigationButtonPressed:(UIButton *)pSender;
@@ -60,6 +61,11 @@
         case 3: {//help button
             TFHelpViewController *lController = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
             [self.navigationController pushViewController:lController animated:YES];
+        }
+            break;
+        case 4:{
+            TFGraphEditorViewController *lGraphEditor = [[TFGraphEditorViewController alloc] initWithNibName:@"TFGraphEditorViewController" bundle:nil];
+            [self.navigationController pushViewController:lGraphEditor animated:YES];
         }
             break;
             

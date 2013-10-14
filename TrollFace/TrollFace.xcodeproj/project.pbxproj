@@ -142,6 +142,9 @@
 		84471ED61804B437005BC4EF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84471ED51804B437005BC4EF /* MBProgressHUD.m */; };
 		84471EDA1804B45A005BC4EF /* Lockbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 84471ED91804B45A005BC4EF /* Lockbox.m */; };
 		848B929F180AA85E00056EED /* RNGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 848B929E180AA85E00056EED /* RNGridMenu.m */; };
+		8494F29B180C903600A5B091 /* TFGraphEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8494F299180C903500A5B091 /* TFGraphEditorViewController.m */; };
+		8494F29C180C903600A5B091 /* TFGraphEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8494F29A180C903500A5B091 /* TFGraphEditorViewController.xib */; };
+		8494F2A2180C932B00A5B091 /* TFCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8494F2A1180C932B00A5B091 /* TFCanvasView.m */; };
 		849F94EB1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F94EA1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		84BD31C11809C79200D86F71 /* TFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BD31C01809C79200D86F71 /* TFAlertView.m */; };
 		84BD31C31809FDA700D86F71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C21809FDA700D86F71 /* QuartzCore.framework */; };
@@ -403,6 +406,11 @@
 		84471ED91804B45A005BC4EF /* Lockbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lockbox.m; sourceTree = "<group>"; };
 		848B929D180AA85E00056EED /* RNGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGridMenu.h; sourceTree = "<group>"; };
 		848B929E180AA85E00056EED /* RNGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGridMenu.m; sourceTree = "<group>"; };
+		8494F298180C903500A5B091 /* TFGraphEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFGraphEditorViewController.h; path = GraphEditorViewController/TFGraphEditorViewController.h; sourceTree = "<group>"; };
+		8494F299180C903500A5B091 /* TFGraphEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFGraphEditorViewController.m; path = GraphEditorViewController/TFGraphEditorViewController.m; sourceTree = "<group>"; };
+		8494F29A180C903500A5B091 /* TFGraphEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFGraphEditorViewController.xib; path = GraphEditorViewController/TFGraphEditorViewController.xib; sourceTree = "<group>"; };
+		8494F2A0180C932B00A5B091 /* TFCanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFCanvasView.h; path = CanvasView/TFCanvasView.h; sourceTree = "<group>"; };
+		8494F2A1180C932B00A5B091 /* TFCanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFCanvasView.m; path = CanvasView/TFCanvasView.m; sourceTree = "<group>"; };
 		849F94E91807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALAssetsLibrary+CustomPhotoAlbum.h"; path = "CustomCategories/ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
 		849F94EA1807479600104768 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALAssetsLibrary+CustomPhotoAlbum.m"; path = "CustomCategories/ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
 		84BD31BF1809C79200D86F71 /* TFAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFAlertView.h; path = CustomComponents/TFAlertView/TFAlertView.h; sourceTree = "<group>"; };
@@ -915,6 +923,34 @@
 			name = GridMenu;
 			sourceTree = "<group>";
 		};
+		8494F29D180C903D00A5B091 /* GraphEditor */ = {
+			isa = PBXGroup;
+			children = (
+				8494F29F180C931400A5B091 /* CanvasView */,
+				8494F29E180C916C00A5B091 /* GraphViewController */,
+			);
+			name = GraphEditor;
+			sourceTree = "<group>";
+		};
+		8494F29E180C916C00A5B091 /* GraphViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8494F298180C903500A5B091 /* TFGraphEditorViewController.h */,
+				8494F299180C903500A5B091 /* TFGraphEditorViewController.m */,
+				8494F29A180C903500A5B091 /* TFGraphEditorViewController.xib */,
+			);
+			name = GraphViewController;
+			sourceTree = "<group>";
+		};
+		8494F29F180C931400A5B091 /* CanvasView */ = {
+			isa = PBXGroup;
+			children = (
+				8494F2A0180C932B00A5B091 /* TFCanvasView.h */,
+				8494F2A1180C932B00A5B091 /* TFCanvasView.m */,
+			);
+			name = CanvasView;
+			sourceTree = "<group>";
+		};
 		849F94E5180746BD00104768 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -960,6 +996,7 @@
 		84E4954118037BEF007B8E29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8494F29D180C903D00A5B091 /* GraphEditor */,
 				84E4955E180381AC007B8E29 /* TFAbstractViewController */,
 				84E4954818037C6C007B8E29 /* HelpViewController */,
 				84E4954718037C5D007B8E29 /* SettingsViewController */,
@@ -1140,6 +1177,7 @@
 				84E4955718037D18007B8E29 /* TFSettingsViewController.xib in Resources */,
 				84471E731804B2F7005BC4EF /* overlay.png in Resources */,
 				84471E751804B2F7005BC4EF /* picasa.png in Resources */,
+				8494F29C180C903600A5B091 /* TFGraphEditorViewController.xib in Resources */,
 				84471E641804B2F7005BC4EF /* defaultThumb.png in Resources */,
 				84471E791804B2F7005BC4EF /* skydrive.png in Resources */,
 				84471E651804B2F7005BC4EF /* dropbox.png in Resources */,
@@ -1190,6 +1228,7 @@
 				84471E041804B1E4005BC4EF /* GCVote.m in Sources */,
 				84471DF41804B1E4005BC4EF /* GCFile.m in Sources */,
 				84471E991804B3C1005BC4EF /* AFXMLRequestOperation.m in Sources */,
+				8494F2A2180C932B00A5B091 /* TFCanvasView.m in Sources */,
 				84471E071804B1E4005BC4EF /* GCMD5Hash.c in Sources */,
 				84471E0B1804B1E4005BC4EF /* NSString+QueryString.m in Sources */,
 				84471E5C1804B2F7005BC4EF /* GCPhotoPickerViewController.m in Sources */,
@@ -1220,6 +1259,7 @@
 				84471E5E1804B2F7005BC4EF /* GCAccount.m in Sources */,
 				848B929F180AA85E00056EED /* RNGridMenu.m in Sources */,
 				84471E0C1804B1E4005BC4EF /* GCLoginView.m in Sources */,
+				8494F29B180C903600A5B091 /* TFGraphEditorViewController.m in Sources */,
 				84471DE41804B1E4005BC4EF /* GCServiceAlbum.m in Sources */,
 				8409E3381805FB0C00DAD11F /* Settings.m in Sources */,
 				84471DF11804B1E4005BC4EF /* GCComment.m in Sources */,
