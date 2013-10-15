@@ -36,7 +36,18 @@
 }
 
 - (void)buttonPressed:(id)sender {
-    TFAlertView *lAlert = [[TFAlertView alloc] initWithTitle:@"TFAle dfgnbdfgtndfdfhdf df gdgf ndfg ndfgn dfng df rt" message:@"sorng ns dnsdlfindf ls dfgnd fgndgfhndgn dgt ng ndg nd gfnd gfnd nd n hgdfnlbsnb sldnb lsd" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"ooooo", @"ooo sdfv oo",@"oooodf do",@"ret ",nil];
+//    TFAlertView *lAlert = [[TFAlertView alloc] initWithTitle:@"TFAle dfgnbdfgtndfdfhdf df gdgf ndfg ndfgn dfng df rt"
+//                                                     message:@"sorng ns dnsdlfindf ls dfgnd fgndgfhndgn dgt ng ndg nd gfnd gfnd nd n hgdfnlbsnb sldnb lsd"
+//                                                    delegate:self
+//                                                   rootView :self.view
+//                                           cancelButtonTitle:@"Cancel"
+//                                           otherButtonTitles:@"ooooo",nil];
+    
+//    TFAlertView *lAlert = [[TFAlertView alloc] initInfoViewWithInfo:@" fj sbvj kdbjv db vjhfdbv jkdfkv sdkljhgdkjfh idsh bludifh bkufdhb kydh fbkifdh ikudf hiluhfdigubhfd bhdufihb kufb df hg dbfkjvhdbfk" atLocation:TFLocationTop rootView:self.view];
+    
+    TFAlertView *lAlert = [[TFAlertView alloc] initWithMessage:@" gvjsdgf ujsdg vjsd vgdf vdf bdsf bsdf gsdb dfb uisd"
+                                                      rootView:self.view];
+    
     [lAlert showAnimating:YES];
 }
 

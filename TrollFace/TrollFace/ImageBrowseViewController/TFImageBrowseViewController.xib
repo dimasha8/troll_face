@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TFImageBrowseViewController">
             <connections>
                 <outlet property="mContentView" destination="Kew-Kv-mq3" id="5LT-JD-d8a"/>
+                <outlet property="mCountLabel" destination="LIS-ov-4bR" id="3zl-db-U2t"/>
                 <outlet property="mNavigationBar" destination="8ie-69-irp" id="3Xd-LE-vCc"/>
                 <outlet property="mToolBar" destination="G52-1a-axV" id="wIw-mm-cz6"/>
                 <outlet property="view" destination="1" id="BNw-M2-Nzr"/>
@@ -23,25 +24,32 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U6M-zL-uKz">
-                            <rect key="frame" x="0.0" y="-5.4474185162686054e-09" width="70" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="previousImagePressed:" destination="-1" eventType="touchUpInside" id="imw-RS-zvg"/>
+                                <action selector="changeImagePressed:" destination="-1" eventType="touchUpInside" id="5G0-vD-gEn"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uF9-jH-P2k">
-                            <rect key="frame" x="250" y="1.0000000000028804" width="70" height="44"/>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uF9-jH-P2k">
+                            <rect key="frame" x="250" y="0.99999999987610522" width="70" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="nextImagePressed:" destination="-1" eventType="touchUpInside" id="v6k-Mo-RGy"/>
+                                <action selector="changeImagePressed:" destination="-1" eventType="touchUpInside" id="AyP-lu-NQu"/>
                             </connections>
                         </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 of 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LIS-ov-4bR">
+                            <rect key="frame" x="78" y="12" width="164" height="21"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>

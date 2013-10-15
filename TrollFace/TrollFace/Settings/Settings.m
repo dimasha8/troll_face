@@ -66,7 +66,7 @@
             //get images pathes
             [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
                 if(result != nil) {
-                    [lPathes addObject:result];
+                    [lPathes addObject:[UIImage imageWithCGImage:[[result defaultRepresentation] fullScreenImage]]];
                 } else {
                     pBlock(nil, lPathes);
                 }

@@ -14,6 +14,7 @@
     IBOutlet UIView *mNavigationBar;
     IBOutlet UIScrollView *mContentView;
     IBOutlet UIView *mToolBar;
+    IBOutlet UILabel *mCountLabel;
     
     NSArray *mAssetsArray;
     
@@ -25,7 +26,6 @@
 - (IBAction)infoButtonPressed:(UIButton *)pSender;
 
 //tool bar actions
-- (IBAction)nextImagePressed:(UIButton *)pSender;
-- (IBAction)previousImagePressed:(UIButton *)pSender;
+- (IBAction)changeImagePressed:(UIButton *)pSender;
 
 @end

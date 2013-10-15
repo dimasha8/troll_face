@@ -9,7 +9,6 @@
 #define NAVIGATIONBAR_TIME_VISIBLE 3.0
 
 #import "TFImageBrowseViewController.h"
-#import "UIImageView+Asset.h"
 
 @interface TFImageBrowseViewController ()
 
@@ -47,7 +46,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    mShowedImageIndex = 0;
+    mShowedImageIndex = 5;
     
     [[Settings sharedSettings] getListOfPhotosInGroup:PHOTO_ALBUM complitionBlock:^(NSError *error, NSArray *imagesPath) {
         DLog(@"error: %@", error);
@@ -99,8 +98,16 @@
 
 - (void)showImageAtIndex:(NSInteger)pIndex {
     if(pIndex < mAssetsArray.count && pIndex >= 0) {
-        UIImageView *lCell = [[UIImageView alloc] initWithFrame:mContentView.bounds asset:[mAssetsArray objectAtIndex:pIndex]];
+        //show new image
+        UIImageView *lCell = [[UIImageView alloc] initWithFrame:mContentView.bounds];
+        [lCell setContentMode:UIViewContentModeScaleAspectFit];
+        [lCell setBackgroundColor:[UIColor lightGrayColor]];
+        lCell.image = [mAssetsArray objectAtIndex:pIndex];
+        
         [mContentView addSubview:lCell];
+        
+        //change count label
+        mCountLabel.text = [NSString stringWithFormat:@"%i %@ %i", pIndex + 1, NSLocalizedString(@"of", nil), mAssetsArray.count];
     }
 }
 
@@ -173,12 +180,16 @@
 }
 
 //tool bar actions
-- (IBAction)nextImagePressed:(UIButton *)pSender {
-    
-}
-
-- (IBAction)previousImagePressed:(UIButton *)pSender {
-    
+- (void)changeImagePressed:(UIButton *)pSender {
+    NSInteger lBorderIndex = pSender.tag == 0?0:mAssetsArray.count - 1;
+    if(mShowedImageIndex != lBorderIndex) {
+        mShowedImageIndex = pSender.tag == 0?--mShowedImageIndex:++mShowedImageIndex;
+        
+        [self showImageAtIndex:mShowedImageIndex];
+    } else {
+        TFAlertView *lAlert = [[TFAlertView alloc] initInfoViewWithInfo:pSender.tag?@"This is the first image":@"This is the first image" atLocation:TFLocationBottom rootView:self.view];
+        [lAlert showAnimating:YES];
+    }
 }
 
 @end

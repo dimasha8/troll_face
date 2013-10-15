@@ -7,8 +7,11 @@
 //
 
 #define ALERT_VIEW_WIDTH 300.0f
+#define ALERT_VIEW_CORNER_RADIUS 10.0
 #define EDGE_INSETS 5.0f
 #define BUTTON_HEIGHT 44.0f
+
+#define INFOVIEW_TIMEVISIBLE 3.0
 
 #import "TFAlertView.h"
 #import <QuartzCore/QuartzCore.h>
@@ -16,9 +19,10 @@
 
 @implementation TFAlertView
 
-- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id<TFAlertViewDelegare>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... {
-    if(self = [super initWithFrame:[[UIScreen mainScreen] bounds]]) {
+- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id<TFAlertViewDelegare>)delegate rootView:(UIView *)pRootView cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... {
+    if(self = [super initWithFrame:pRootView.bounds]) {
         mDelegate = delegate;
+        mRootView = pRootView;
         
         NSMutableArray *lButtons = [[NSMutableArray alloc] initWithObjects:cancelButtonTitle, nil];
         
@@ -36,32 +40,57 @@
     return self;
 }
 
+- (id)initWithMessage:(NSString *)pMessage rootView:(UIView *)pRootView{
+    if(self = [super initWithFrame:pRootView.bounds]) {
+        mRootView = pRootView;
+        [self addTitle:nil message:pMessage buttons:@[@"OK"]];
+    }
+    return self;
+}
+
+- (id)initInfoViewWithInfo:(NSString *)pInfo atLocation:(TFInfoViewLocation)pLocation rootView:(UIView *)pRootView{
+    if(self = [super initWithFrame:pRootView.bounds]) {
+        mInfoView = YES;
+        mInfoViewLocation = pLocation;
+        
+        mRootView = pRootView;
+        [self addTitle:nil message:pInfo buttons:nil];
+    }
+    return self;
+}
+
 #pragma mark - setup GUI
 - (void)addTitle:(NSString *)pTitle message:(NSString *)pMessage buttons:(NSArray *)pButtons {
     //init contant view
     mAlertView = [[UIView alloc] init];
     mAlertView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.75];
+    mAlertView.layer.cornerRadius = ALERT_VIEW_CORNER_RADIUS;
     
     //init local variables
-    NSInteger lContentWidth = ALERT_VIEW_WIDTH - 2 * EDGE_INSETS;
+    NSInteger lContentWidth = ALERT_VIEW_WIDTH - (mInfoView?2:EDGE_INSETS) * EDGE_INSETS;
     NSInteger lContentHeight = 0;
+    NSInteger lMessageLabelY = EDGE_INSETS;
     
     CGSize lLabelSize;
     
     //init title label
-    UIFont *lTitleFont = [UIFont boldSystemFontOfSize:17.0];
-    
-    UILabel *lTitle = [[UILabel alloc] init];
-    lTitle.font = lTitleFont;
-    lTitle.numberOfLines = 0;
-    lTitle.backgroundColor = [UIColor clearColor];
-    lTitle.textColor = [UIColor whiteColor];
-    lTitle.textAlignment = NSTextAlignmentCenter;
-    lTitle.text = pTitle;
-    
-    lLabelSize = [pTitle sizeWithFont:lTitleFont constrainedToSize:CGSizeMake(lContentWidth, NSIntegerMax) lineBreakMode:NSLineBreakByWordWrapping];
-    [lTitle setFrame:CGRectMake(EDGE_INSETS, EDGE_INSETS, lContentWidth, lLabelSize.height)];
-    [mAlertView addSubview:lTitle];
+    if(pTitle != nil) {
+        UIFont *lTitleFont = [UIFont boldSystemFontOfSize:17.0];
+        
+        UILabel *lTitle = [[UILabel alloc] init];
+        lTitle.font = lTitleFont;
+        lTitle.numberOfLines = 0;
+        lTitle.backgroundColor = [UIColor clearColor];
+        lTitle.textColor = [UIColor whiteColor];
+        lTitle.textAlignment = NSTextAlignmentCenter;
+        lTitle.text = pTitle;
+        
+        lLabelSize = [pTitle sizeWithFont:lTitleFont constrainedToSize:CGSizeMake(lContentWidth, NSIntegerMax) lineBreakMode:NSLineBreakByWordWrapping];
+        [lTitle setFrame:CGRectMake(EDGE_INSETS, EDGE_INSETS, lContentWidth, lLabelSize.height)];
+        [mAlertView addSubview:lTitle];
+        
+        lMessageLabelY = CGRectGetMaxY(lTitle.frame) + EDGE_INSETS * 2;
+    }
     
     //init message label
     UIFont *lMessageFont = [UIFont systemFontOfSize:15.0];
@@ -75,44 +104,61 @@
     lMessage.text = pMessage;
     
     lLabelSize = [pMessage sizeWithFont:lMessageFont constrainedToSize:CGSizeMake(lContentWidth, NSIntegerMax) lineBreakMode:NSLineBreakByWordWrapping];
-    [lMessage setFrame:CGRectMake(EDGE_INSETS, 2 * EDGE_INSETS + CGRectGetMaxY(lTitle.frame), lContentWidth, lLabelSize.height)];
+    [lMessage setFrame:CGRectMake(EDGE_INSETS, lMessageLabelY, lContentWidth, lLabelSize.height)];
     [mAlertView addSubview:lMessage];
     
     //init buttons
-    NSInteger lPreviousY = CGRectGetMaxY(lMessage.frame) + 2 * EDGE_INSETS;
-    NSInteger lPreviousX = EDGE_INSETS;
-    NSInteger lButtonWidth = pButtons.count == 2?(lContentWidth - 3 * EDGE_INSETS) / 2: lContentWidth - 2 * EDGE_INSETS;
-    for (int i = 0; i < pButtons.count; i++) {
-        UIButton *lButton = [[UIButton alloc] initWithFrame:CGRectMake(lPreviousX,
-                                                                       lPreviousY,
-                                                                       lButtonWidth,
-                                                                       BUTTON_HEIGHT)];
-        lButton.tag = i;
-        [lButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-        [lButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [lButton setBackgroundColor:[UIColor clearColor]];
-        [lButton setTitle:[pButtons objectAtIndex:i] forState:UIControlStateNormal];
-        
-        if(pButtons.count > 2) {
-            lPreviousY = CGRectGetMaxY(lButton.frame) + EDGE_INSETS;
-        } else {
-            lPreviousX = CGRectGetMaxX(lButton.frame) + EDGE_INSETS;
-        }
-        
-        if(i == 0) {//set button cancel style
+    if(pButtons != nil) {
+        NSInteger lPreviousY = CGRectGetMaxY(lMessage.frame) + 2 * EDGE_INSETS;
+        NSInteger lPreviousX = EDGE_INSETS;
+        NSInteger lButtonWidth = pButtons.count == 2?(lContentWidth - 3 * EDGE_INSETS) / 2: lContentWidth - 2 * EDGE_INSETS;
+        for (int i = 0; i < pButtons.count; i++) {
+            UIButton *lButton = [[UIButton alloc] initWithFrame:CGRectMake(lPreviousX,
+                                                                           lPreviousY,
+                                                                           lButtonWidth,
+                                                                           BUTTON_HEIGHT)];
+            lButton.tag = i;
+            [lButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+            [lButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [lButton setBackgroundColor:[UIColor clearColor]];
+            [lButton setTitle:[pButtons objectAtIndex:i] forState:UIControlStateNormal];
             
+            if(pButtons.count > 2) {
+                lPreviousY = CGRectGetMaxY(lButton.frame) + EDGE_INSETS;
+            } else {
+                lPreviousX = CGRectGetMaxX(lButton.frame) + EDGE_INSETS;
+            }
+            
+            if(i == 0) {//set button cancel style
+                
+            }
+            
+            [mAlertView addSubview:lButton];
+            
+            if(i == pButtons.count - 1) {
+                lContentHeight = CGRectGetMaxY(lButton.frame) + EDGE_INSETS;
+            }
         }
-        
-        [mAlertView addSubview:lButton];
-        
-        if(i == pButtons.count - 1) {
-            lContentHeight = CGRectGetMaxY(lButton.frame) + EDGE_INSETS;
-        }
+    } else {
+        lContentHeight = CGRectGetMaxY(lMessage.frame) + EDGE_INSETS;
     }
     
     //set for content view
+    NSInteger lAlertViewY = self.frame.size.height / 2.0 - (lContentHeight + 2 * EDGE_INSETS) / 2.0;
+    switch (mInfoViewLocation) {
+        case TFLocationBottom:
+            lAlertViewY = mRootView.frame.size.height - lContentHeight - EDGE_INSETS * EDGE_INSETS;
+            break;
+        
+        case TFLocationTop:
+            lAlertViewY = EDGE_INSETS * EDGE_INSETS;
+            break;
+            
+        default:
+            break;
+    }
     mAlertView.frame = CGRectMake(self.frame.size.width / 2.0 - ALERT_VIEW_WIDTH / 2.0,
-                                  self.frame.size.height / 2.0 - (lContentHeight + 2 * EDGE_INSETS) / 2.0,
+                                  lAlertViewY,
                                   ALERT_VIEW_WIDTH,
                                   lContentHeight);
     [self addSubview:mAlertView];
@@ -121,17 +167,22 @@
 #pragma mark -  Visibility methods
 - (void)showAnimating:(BOOL)pAnimating {
     [self setBackgroundColor:[UIColor clearColor]];
-    mBackGroundView = [[UIView alloc] initWithFrame:self.bounds];
+    
+    mBackGroundView = [[UIView alloc] initWithFrame:mRootView.bounds];
     
     //set blurred background image
-    mBackGroundView.layer.contents = (__bridge id)[self blurredImage:[self getBackGround] blurLevel:0.3 exclusionPath:nil].CGImage;
+    if (!mInfoView) {
+        mBackGroundView.layer.contents = (__bridge id)[self blurredImage:[self getBackGroundOfView:mRootView]
+                                                               blurLevel:0.3
+                                                           exclusionPath:nil].CGImage;
+    } else {
+        [self performSelector:@selector(hideAnimating:) withObject:[NSNumber numberWithBool:YES] afterDelay:INFOVIEW_TIMEVISIBLE];
+    }
     [self addSubview:mBackGroundView];
     
     [mBackGroundView addSubview:mAlertView];
     
-    NSInteger lRotateDeg = [self getdeviceOrientationInDegrees];
-    self.transform = CGAffineTransformMakeRotation(degreesToRadians(lRotateDeg));
-    [appDelegate.window addSubview:self];
+    [mRootView addSubview:self];
     if(pAnimating) {
         [self doAnimationShow:YES];
     }
@@ -352,9 +403,9 @@
     return returnImage;
 }
 
-- (UIImage *)getBackGround {
-    UIGraphicsBeginImageContext(appDelegate.window.frame.size);
-    [appDelegate.window.layer renderInContext:UIGraphicsGetCurrentContext()];
+- (UIImage *)getBackGroundOfView:(UIView *)pView {
+    UIGraphicsBeginImageContext(pView.frame.size);
+    [pView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -375,6 +426,13 @@
     }
     
     [self hideAnimating:YES];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if(mInfoView) {
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideAnimating:) object:nil];
+        [self hideAnimating:YES];
+    }
 }
 
 /*

@@ -6,6 +6,12 @@
 //  Copyright (c) 2013 dmytro.nosulich. All rights reserved.
 //
 
+typedef NS_ENUM (NSInteger, TFInfoViewLocation) {
+    TFLocationCenter,
+    TFLocationTop,
+    TFLocationBottom,
+    };
+
 #import <UIKit/UIKit.h>
 
 @protocol TFAlertViewDelegare;
@@ -14,10 +20,25 @@
     
     UIView *mAlertView;
     UIView *mBackGroundView;
+    //view vhere will display alert
+    UIView *mRootView;
+    
+    TFInfoViewLocation mInfoViewLocation;
+    
+    //this variable detect if alert view is info view
+    BOOL mInfoView;
 }
 
-- (id)initWithTitle:(NSString *)pTitle message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...NS_REQUIRES_NIL_TERMINATION;
+//init alert view
+- (id)initWithTitle:(NSString *)pTitle message:(NSString *)message delegate:(id)delegate rootView:(UIView *)pRootView cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...NS_REQUIRES_NIL_TERMINATION;
 
+//init alert with single message(without title) and cancel button "OK"
+- (id)initWithMessage:(NSString *)pMessage rootView:(UIView *)pRootView;
+
+//show single info view
+- (id)initInfoViewWithInfo:(NSString *)pInfo atLocation:(TFInfoViewLocation)pLocation rootView:(UIView *)pRootView;
+
+//show alert
 - (void)showAnimating:(BOOL)pAnimating;
 
 @end
