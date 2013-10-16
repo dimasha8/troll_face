@@ -6,6 +6,11 @@
 //  Copyright (c) 2013 dmytro.nosulich. All rights reserved.
 //
 
+//image cell
+#define IMAGE_CELL_WIDTH 320.0
+#define SPACE_BETWEEN_IMAGES 20.0
+
+//animation
 #define NAVIGATIONBAR_TIME_VISIBLE 3.0
 
 #import "TFImageBrowseViewController.h"
@@ -36,17 +41,13 @@
     
     UITapGestureRecognizer *lTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
     [mContentView addGestureRecognizer:lTapGesture];
-    
-    UIPanGestureRecognizer *lPanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
-    [lPanGesture setMaximumNumberOfTouches:1];
-    [lPanGesture setMinimumNumberOfTouches:1];
-    [mContentView addGestureRecognizer:lPanGesture];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    mShowedImageIndex = 5;
+    mShowedImageIndex = 0;
+    mShowedImagesCount = -1;
     
     [[Settings sharedSettings] getListOfPhotosInGroup:PHOTO_ALBUM complitionBlock:^(NSError *error, NSArray *imagesPath) {
         DLog(@"error: %@", error);
@@ -98,16 +99,46 @@
 
 - (void)showImageAtIndex:(NSInteger)pIndex {
     if(pIndex < mAssetsArray.count && pIndex >= 0) {
-        //show new image
-        UIImageView *lCell = [[UIImageView alloc] initWithFrame:mContentView.bounds];
-        [lCell setContentMode:UIViewContentModeScaleAspectFit];
-        [lCell setBackgroundColor:[UIColor lightGrayColor]];
-        lCell.image = [mAssetsArray objectAtIndex:pIndex];
         
-        [mContentView addSubview:lCell];
+        static NSInteger lPreviousImageIndex = 0;
+        BOOL lNextImage = pIndex > lPreviousImageIndex;
+        
+        if(pIndex > mShowedImagesCount) {
+            mShowedImagesCount = MAX(mShowedImagesCount, pIndex);
+            
+            //show new image
+            NSInteger lImageCellX = mContentView.contentSize.width + (mShowedImagesCount > 0?SPACE_BETWEEN_IMAGES:0.0);
+            DLog(@"lImageCellX: %i", lImageCellX);
+            UIImageView *lCell = [[UIImageView alloc] initWithFrame:CGRectMake(lImageCellX,
+                                                                               0,
+                                                                               IMAGE_CELL_WIDTH,
+                                                                               mContentView.frame.size.height)];
+            [lCell setContentMode:UIViewContentModeScaleAspectFit];
+            [lCell setBackgroundColor:[UIColor clearColor]];
+            lCell.image = [mAssetsArray objectAtIndex:pIndex];
+            
+            //change content size
+            DLog(@"content size 1: %@", NSStringFromCGSize(mContentView.contentSize));
+            mContentView.contentSize = CGSizeMake(mContentView.contentSize.width + IMAGE_CELL_WIDTH + (mShowedImagesCount > 0?SPACE_BETWEEN_IMAGES:0.0),
+                                                  mContentView.frame.size.height);
+            DLog(@"content size 2: %@", NSStringFromCGSize(mContentView.contentSize));
+            
+            [mContentView addSubview:lCell];
+        }
+        
+        if(mShowedImagesCount != 0) {
+            NSInteger lContentOffset = lNextImage?(IMAGE_CELL_WIDTH + SPACE_BETWEEN_IMAGES):-(IMAGE_CELL_WIDTH + SPACE_BETWEEN_IMAGES);
+            [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+                mContentView.contentOffset = CGPointMake(mContentView.contentOffset.x + lContentOffset,
+                                                         mContentView.contentOffset.y);
+            }];
+        }
+        DLog(@"contant offset: %@ --------------------", NSStringFromCGPoint(mContentView.contentOffset));
         
         //change count label
         mCountLabel.text = [NSString stringWithFormat:@"%i %@ %i", pIndex + 1, NSLocalizedString(@"of", nil), mAssetsArray.count];
+        
+        lPreviousImageIndex = pIndex;
     }
 }
 
@@ -135,6 +166,22 @@
     [lGridMenu showInViewController:self center:pPoint];
 }
 
+#pragma mark - Delegates
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    DLog(@"scrollViewWillEndDragging");
+    
+    if(targetContentOffset->x != 0 || (targetContentOffset->x != (mContentView.contentSize.width - IMAGE_CELL_WIDTH))) {
+        DLog(@"offset: %@", NSStringFromCGPoint(*targetContentOffset));
+        
+        CGFloat lScale = targetContentOffset->x / (IMAGE_CELL_WIDTH + SPACE_BETWEEN_IMAGES);
+        
+        if(lScale > 1.0) {
+        }
+    }
+    mContentView.pagingEnabled = YES;
+}
+
 #pragma mark - GridMenu delegate
 - (void)gridMenu:(RNGridMenu *)gridMenu willDismissWithSelectedItem:(RNGridMenuItem *)item atIndex:(NSInteger)itemIndex {
     DLog(@"item index: %i", itemIndex);
@@ -151,23 +198,6 @@
 - (void)tapGesture:(UITapGestureRecognizer *)pTap {
     if(pTap.state == UIGestureRecognizerStateEnded) {
         [self showHideNavigationBar:YES];
-    }
-}
-
-- (void)panGesture:(UIPanGestureRecognizer *)pPan {
-    switch (pPan.state) {
-        case UIGestureRecognizerStateBegan:{
-            
-        }
-            break;
-            
-        case UIGestureRecognizerStateChanged:{
-            
-        }
-            break;
-            
-        default:
-            break;
     }
 }
 
@@ -189,7 +219,7 @@
         
         [self showImageAtIndex:mShowedImageIndex];
     } else {
-        TFAlertView *lAlert = [[TFAlertView alloc] initInfoViewWithInfo:pSender.tag?@"This is the first image":@"This is the first image" atLocation:TFLocationBottom rootView:self.view];
+        TFAlertView *lAlert = [[TFAlertView alloc] initInfoViewWithInfo:pSender.tag?@"This is the first image":@"This is the last image" atLocation:TFLocationBottom rootView:self.view];
         [lAlert showAnimating:YES];
     }
 }
