@@ -10,6 +10,12 @@
 		8409E3381805FB0C00DAD11F /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8409E3371805FB0C00DAD11F /* Settings.m */; };
 		8409E33A1806062700DAD11F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8409E3391806062700DAD11F /* AVFoundation.framework */; };
 		8409E33C1806071B00DAD11F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8409E33B1806071B00DAD11F /* AssetsLibrary.framework */; };
+		840E90D6180F084E00CD0C18 /* TFCreateMemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E90D4180F084E00CD0C18 /* TFCreateMemViewController.m */; };
+		840E90D7180F084E00CD0C18 /* TFCreateMemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840E90D5180F084E00CD0C18 /* TFCreateMemViewController.xib */; };
+		840E90DC180F123300CD0C18 /* TFCanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E90DA180F123200CD0C18 /* TFCanvasViewController.m */; };
+		840E90DD180F123300CD0C18 /* TFCanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840E90DB180F123200CD0C18 /* TFCanvasViewController.xib */; };
+		840E90E2180F291900CD0C18 /* TFEmptyMemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E90E0180F291900CD0C18 /* TFEmptyMemViewController.m */; };
+		840E90E3180F291900CD0C18 /* TFEmptyMemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840E90E1180F291900CD0C18 /* TFEmptyMemViewController.xib */; };
 		8413366418036BF6003FAC97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366318036BF6003FAC97 /* Foundation.framework */; };
 		8413366618036BF6003FAC97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366518036BF6003FAC97 /* CoreGraphics.framework */; };
 		8413366818036BF6003FAC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413366718036BF6003FAC97 /* UIKit.framework */; };
@@ -176,6 +182,15 @@
 		8409E3371805FB0C00DAD11F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Settings/Settings.m; sourceTree = "<group>"; };
 		8409E3391806062700DAD11F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8409E33B1806071B00DAD11F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		840E90D3180F084E00CD0C18 /* TFCreateMemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFCreateMemViewController.h; path = CreateMemViewController/TFCreateMemViewController.h; sourceTree = "<group>"; };
+		840E90D4180F084E00CD0C18 /* TFCreateMemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFCreateMemViewController.m; path = CreateMemViewController/TFCreateMemViewController.m; sourceTree = "<group>"; };
+		840E90D5180F084E00CD0C18 /* TFCreateMemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFCreateMemViewController.xib; path = CreateMemViewController/TFCreateMemViewController.xib; sourceTree = "<group>"; };
+		840E90D9180F123200CD0C18 /* TFCanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFCanvasViewController.h; path = CanvasViewController/TFCanvasViewController.h; sourceTree = "<group>"; };
+		840E90DA180F123200CD0C18 /* TFCanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFCanvasViewController.m; path = CanvasViewController/TFCanvasViewController.m; sourceTree = "<group>"; };
+		840E90DB180F123200CD0C18 /* TFCanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFCanvasViewController.xib; path = CanvasViewController/TFCanvasViewController.xib; sourceTree = "<group>"; };
+		840E90DF180F291900CD0C18 /* TFEmptyMemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFEmptyMemViewController.h; path = EmptyMemViewController/TFEmptyMemViewController.h; sourceTree = "<group>"; };
+		840E90E0180F291900CD0C18 /* TFEmptyMemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFEmptyMemViewController.m; path = EmptyMemViewController/TFEmptyMemViewController.m; sourceTree = "<group>"; };
+		840E90E1180F291900CD0C18 /* TFEmptyMemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TFEmptyMemViewController.xib; path = EmptyMemViewController/TFEmptyMemViewController.xib; sourceTree = "<group>"; };
 		8413366018036BF6003FAC97 /* TrollFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrollFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8413366318036BF6003FAC97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8413366518036BF6003FAC97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -472,6 +487,36 @@
 				8409E3371805FB0C00DAD11F /* Settings.m */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		840E90D8180F085600CD0C18 /* CreateMemViewController */ = {
+			isa = PBXGroup;
+			children = (
+				840E90D3180F084E00CD0C18 /* TFCreateMemViewController.h */,
+				840E90D4180F084E00CD0C18 /* TFCreateMemViewController.m */,
+				840E90D5180F084E00CD0C18 /* TFCreateMemViewController.xib */,
+			);
+			name = CreateMemViewController;
+			sourceTree = "<group>";
+		};
+		840E90DE180F125E00CD0C18 /* CanvasViewController */ = {
+			isa = PBXGroup;
+			children = (
+				840E90D9180F123200CD0C18 /* TFCanvasViewController.h */,
+				840E90DA180F123200CD0C18 /* TFCanvasViewController.m */,
+				840E90DB180F123200CD0C18 /* TFCanvasViewController.xib */,
+			);
+			name = CanvasViewController;
+			sourceTree = "<group>";
+		};
+		840E90E4180F292A00CD0C18 /* EmptyMemViewController */ = {
+			isa = PBXGroup;
+			children = (
+				840E90DF180F291900CD0C18 /* TFEmptyMemViewController.h */,
+				840E90E0180F291900CD0C18 /* TFEmptyMemViewController.m */,
+				840E90E1180F291900CD0C18 /* TFEmptyMemViewController.xib */,
+			);
+			name = EmptyMemViewController;
 			sourceTree = "<group>";
 		};
 		8413365718036BF6003FAC97 = {
@@ -1009,6 +1054,8 @@
 		84E4954118037BEF007B8E29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				840E90E4180F292A00CD0C18 /* EmptyMemViewController */,
+				840E90DE180F125E00CD0C18 /* CanvasViewController */,
 				8494F29D180C903D00A5B091 /* GraphEditor */,
 				84E4955E180381AC007B8E29 /* TFAbstractViewController */,
 				84E4954818037C6C007B8E29 /* HelpViewController */,
@@ -1016,6 +1063,7 @@
 				84E4954618037C49007B8E29 /* ImageBrowserViewController */,
 				84E4954518037C35007B8E29 /* CreateNewViewController */,
 				84E4954418037C27007B8E29 /* MainViewController */,
+				840E90D8180F085600CD0C18 /* CreateMemViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1172,6 +1220,7 @@
 			files = (
 				84471E691804B2F7005BC4EF /* flickr.png in Resources */,
 				84471E701804B2F7005BC4EF /* gradient_blue.png in Resources */,
+				840E90E3180F291900CD0C18 /* TFEmptyMemViewController.xib in Resources */,
 				8413367A18036BF6003FAC97 /* Main_iPad.storyboard in Resources */,
 				84E4954D18037CCE007B8E29 /* TFCreateNewViewController.xib in Resources */,
 				8413367F18036BF6003FAC97 /* Images.xcassets in Resources */,
@@ -1195,6 +1244,7 @@
 				84471E791804B2F7005BC4EF /* skydrive.png in Resources */,
 				84471E651804B2F7005BC4EF /* dropbox.png in Resources */,
 				84471E6A1804B2F7005BC4EF /* flickr@2x.png in Resources */,
+				840E90DD180F123300CD0C18 /* TFCanvasViewController.xib in Resources */,
 				84471E6B1804B2F7005BC4EF /* GCConfiguration.plist in Resources */,
 				84471E711804B2F7005BC4EF /* instagram.png in Resources */,
 				84471E631804B2F7005BC4EF /* chute.png in Resources */,
@@ -1204,6 +1254,7 @@
 				84471E6C1804B2F7005BC4EF /* google.png in Resources */,
 				84471E771804B2F7005BC4EF /* popover_arrow.png in Resources */,
 				84471E661804B2F7005BC4EF /* dropbox@2x.png in Resources */,
+				840E90D7180F084E00CD0C18 /* TFCreateMemViewController.xib in Resources */,
 				84471E7A1804B2F7005BC4EF /* skydrive@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1277,11 +1328,13 @@
 				84471DE41804B1E4005BC4EF /* GCServiceAlbum.m in Sources */,
 				8409E3381805FB0C00DAD11F /* Settings.m in Sources */,
 				84471DF11804B1E4005BC4EF /* GCComment.m in Sources */,
+				840E90D6180F084E00CD0C18 /* TFCreateMemViewController.m in Sources */,
 				84471DF81804B1E4005BC4EF /* GCHeartCount.m in Sources */,
 				84471E931804B3C1005BC4EF /* AFHTTPRequestOperation.m in Sources */,
 				84471E081804B1E4005BC4EF /* KXDataEncoder.m in Sources */,
 				84471E571804B2F7005BC4EF /* NSDictionary+GCAccountAsset.m in Sources */,
 				84471E031804B1E4005BC4EF /* GCUser.m in Sources */,
+				840E90E2180F291900CD0C18 /* TFEmptyMemViewController.m in Sources */,
 				84471DF31804B1E4005BC4EF /* GCCounter.m in Sources */,
 				84471ED61804B437005BC4EF /* MBProgressHUD.m in Sources */,
 				84471EDA1804B45A005BC4EF /* Lockbox.m in Sources */,
@@ -1317,6 +1370,7 @@
 				84471DFB1804B1E4005BC4EF /* GCPagination.m in Sources */,
 				84471E0D1804B1E4005BC4EF /* GCPopupView.m in Sources */,
 				84471DFC1804B1E4005BC4EF /* GCResponse.m in Sources */,
+				840E90DC180F123300CD0C18 /* TFCanvasViewController.m in Sources */,
 				84471E591804B2F7005BC4EF /* GCAccountMediaViewController.m in Sources */,
 				84471E921804B3C1005BC4EF /* AFHTTPClient.m in Sources */,
 				84471DF71804B1E4005BC4EF /* GCHeart.m in Sources */,

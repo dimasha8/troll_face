@@ -156,12 +156,14 @@
 
 - (void)panGesture:(UIPanGestureRecognizer *)pPan {
     switch (pPan.state) {
-        case UIGestureRecognizerStateBegan:
+        case UIGestureRecognizerStateBegan:{
             
+        }
             break;
             
-        case UIGestureRecognizerStateChanged:
+        case UIGestureRecognizerStateChanged:{
             
+        }
             break;
             
         default:

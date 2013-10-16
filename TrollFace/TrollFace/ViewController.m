@@ -13,6 +13,7 @@
 #import "TFSettingsViewController.h"
 #import "TFHelpViewController.h"
 #import "TFGraphEditorViewController.h"
+#import "TFCreateMemViewController.h"
 
 @interface ViewController ()
 - (IBAction)navigationButtonPressed:(UIButton *)pSender;
@@ -41,7 +42,7 @@
 - (IBAction)navigationButtonPressed:(UIButton *)pSender {
     switch (pSender.tag) {
         case 0: {//Create new button
-            TFCreateNewViewController *lController = [[TFCreateNewViewController alloc] initWithNibName:@"TFCreateNewViewController" bundle:nil];
+            TFCreateMemViewController *lController = [[TFCreateMemViewController alloc] initWithNibName:@"TFCreateMemViewController" bundle:nil];
             [self.navigationController pushViewController:lController animated:YES];
         }
             break;
