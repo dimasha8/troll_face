@@ -22,11 +22,11 @@
     //index(in mAssetsArray) of image which is displaing
     NSInteger mShowedImageIndex;
     
-    //this variable contane count of image cells which are on mContent view
-    NSInteger mShowedImagesCount;
-    
     //pan gesture begin point
     CGPoint mBeginPanPoint;
+    
+    //set NO do disallow do scrollView delegate
+    BOOL mAllowExecuteScrollDelegate;
 }
 
 //navigation bar actions

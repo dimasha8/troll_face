@@ -8,7 +8,7 @@
 
 //image cell
 #define IMAGE_CELL_WIDTH 320.0
-#define SPACE_BETWEEN_IMAGES 20.0
+#define SPACE_BETWEEN_IMAGES 10.0
 
 //animation
 #define NAVIGATIONBAR_TIME_VISIBLE 3.0
@@ -35,6 +35,9 @@
 {
     [super viewDidLoad];
     
+    mShowedImageIndex = 1;
+    mAllowExecuteScrollDelegate = YES;
+    
     //add long press gesture recognizer
     RNLongPressGestureRecognizer *lRecognizer = [[RNLongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
     [mContentView addGestureRecognizer:lRecognizer];
@@ -46,16 +49,13 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    mShowedImageIndex = 0;
-    mShowedImagesCount = -1;
-    
     [[Settings sharedSettings] getListOfPhotosInGroup:PHOTO_ALBUM complitionBlock:^(NSError *error, NSArray *imagesPath) {
         DLog(@"error: %@", error);
         if(error == nil) {
             if(imagesPath != nil) {
                 if(imagesPath.count != 0) {
                     mAssetsArray = [imagesPath copy];
-                    [self showImageAtIndex:mShowedImageIndex];
+                    [self setImagesOnScrollView];
                 } else {//there isn't any image in group "Troll friends"
                     
                 }
@@ -97,49 +97,48 @@
     
 }
 
-- (void)showImageAtIndex:(NSInteger)pIndex {
-    if(pIndex < mAssetsArray.count && pIndex >= 0) {
+- (void)showNextImage:(BOOL)pNext {
+    if(mShowedImageIndex < mAssetsArray.count && mShowedImageIndex >= 0) {
         
-        static NSInteger lPreviousImageIndex = 0;
-        BOOL lNextImage = pIndex > lPreviousImageIndex;
+        //change content offset animated
+        NSInteger lContentOffset = (IMAGE_CELL_WIDTH + 2 * SPACE_BETWEEN_IMAGES) * (pNext?1:-1);
+        mAllowExecuteScrollDelegate = NO;
+        [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+            mContentView.contentOffset = CGPointMake(mContentView.contentOffset.x + lContentOffset,
+                                                     mContentView.contentOffset.y);
+        } completion:^(BOOL finished) {
+            mAllowExecuteScrollDelegate = YES;
+        }];
         
-        if(pIndex > mShowedImagesCount) {
-            mShowedImagesCount = MAX(mShowedImagesCount, pIndex);
-            
-            //show new image
-            NSInteger lImageCellX = mContentView.contentSize.width + (mShowedImagesCount > 0?SPACE_BETWEEN_IMAGES:0.0);
-            DLog(@"lImageCellX: %i", lImageCellX);
-            UIImageView *lCell = [[UIImageView alloc] initWithFrame:CGRectMake(lImageCellX,
-                                                                               0,
-                                                                               IMAGE_CELL_WIDTH,
-                                                                               mContentView.frame.size.height)];
-            [lCell setContentMode:UIViewContentModeScaleAspectFit];
-            [lCell setBackgroundColor:[UIColor clearColor]];
-            lCell.image = [mAssetsArray objectAtIndex:pIndex];
-            
-            //change content size
-            DLog(@"content size 1: %@", NSStringFromCGSize(mContentView.contentSize));
-            mContentView.contentSize = CGSizeMake(mContentView.contentSize.width + IMAGE_CELL_WIDTH + (mShowedImagesCount > 0?SPACE_BETWEEN_IMAGES:0.0),
-                                                  mContentView.frame.size.height);
-            DLog(@"content size 2: %@", NSStringFromCGSize(mContentView.contentSize));
-            
-            [mContentView addSubview:lCell];
-        }
+        mShowedImageIndex += pNext?1:-1;
         
-        if(mShowedImagesCount != 0) {
-            NSInteger lContentOffset = lNextImage?(IMAGE_CELL_WIDTH + SPACE_BETWEEN_IMAGES):-(IMAGE_CELL_WIDTH + SPACE_BETWEEN_IMAGES);
-            [UIView animateWithDuration:ANIMATION_DURATION animations:^{
-                mContentView.contentOffset = CGPointMake(mContentView.contentOffset.x + lContentOffset,
-                                                         mContentView.contentOffset.y);
-            }];
-        }
-        DLog(@"contant offset: %@ --------------------", NSStringFromCGPoint(mContentView.contentOffset));
-        
-        //change count label
-        mCountLabel.text = [NSString stringWithFormat:@"%i %@ %i", pIndex + 1, NSLocalizedString(@"of", nil), mAssetsArray.count];
-        
-        lPreviousImageIndex = pIndex;
+        [self setCountLabelShowedIndex:mShowedImageIndex];
     }
+}
+
+- (void)setImagesOnScrollView {
+    for(int i = 0; i < mAssetsArray.count; i++) {
+        NSInteger lImageCellX = mContentView.contentSize.width + SPACE_BETWEEN_IMAGES;
+        UIImageView *lCell = [[UIImageView alloc] initWithFrame:CGRectMake(lImageCellX,
+                                                                           0,
+                                                                           IMAGE_CELL_WIDTH,
+                                                                           mContentView.frame.size.height)];
+        [lCell setContentMode:UIViewContentModeScaleAspectFit];
+        [lCell setBackgroundColor:[UIColor clearColor]];
+        lCell.image = [mAssetsArray objectAtIndex:i];
+        
+        //change content size
+        mContentView.contentSize = CGSizeMake(mContentView.contentSize.width + IMAGE_CELL_WIDTH + SPACE_BETWEEN_IMAGES * 2,
+                                              mContentView.frame.size.height);
+        
+        [mContentView addSubview:lCell];
+    }
+    
+    [self setCountLabelShowedIndex:mShowedImageIndex];
+}
+
+- (void)setCountLabelShowedIndex:(NSInteger)pIndex {
+    mCountLabel.text = [NSString stringWithFormat:@"%i %@ %i", pIndex, NSLocalizedString(@"of", Nil), mAssetsArray.count];
 }
 
 #pragma mark - GridMenu
@@ -168,18 +167,14 @@
 
 #pragma mark - Delegates
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    DLog(@"scrollViewWillEndDragging");
-    
-    if(targetContentOffset->x != 0 || (targetContentOffset->x != (mContentView.contentSize.width - IMAGE_CELL_WIDTH))) {
-        DLog(@"offset: %@", NSStringFromCGPoint(*targetContentOffset));
-        
-        CGFloat lScale = targetContentOffset->x / (IMAGE_CELL_WIDTH + SPACE_BETWEEN_IMAGES);
-        
-        if(lScale > 1.0) {
-        }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if(mAllowExecuteScrollDelegate) {
+        CGFloat lPageWidth = (IMAGE_CELL_WIDTH + 2 * SPACE_BETWEEN_IMAGES);
+        NSInteger lIndex = floorf((scrollView.contentOffset.x - lPageWidth / 2.0) / lPageWidth) + 1;
+        mShowedImageIndex = lIndex + 1;
+        [self setCountLabelShowedIndex:mShowedImageIndex];
     }
-    mContentView.pagingEnabled = YES;
 }
 
 #pragma mark - GridMenu delegate
@@ -213,11 +208,10 @@
 
 //tool bar actions
 - (void)changeImagePressed:(UIButton *)pSender {
-    NSInteger lBorderIndex = pSender.tag == 0?0:mAssetsArray.count - 1;
+    NSInteger lBorderIndex = pSender.tag == 0?1:mAssetsArray.count;
     if(mShowedImageIndex != lBorderIndex) {
-        mShowedImageIndex = pSender.tag == 0?--mShowedImageIndex:++mShowedImageIndex;
         
-        [self showImageAtIndex:mShowedImageIndex];
+        [self showNextImage:pSender.tag == 1];
     } else {
         TFAlertView *lAlert = [[TFAlertView alloc] initInfoViewWithInfo:pSender.tag?@"This is the first image":@"This is the last image" atLocation:TFLocationBottom rootView:self.view];
         [lAlert showAnimating:YES];
