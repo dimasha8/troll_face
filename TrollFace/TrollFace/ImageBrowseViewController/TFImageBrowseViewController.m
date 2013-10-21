@@ -98,7 +98,7 @@
 }
 
 - (void)showNextImage:(BOOL)pNext {
-    if(mShowedImageIndex < mAssetsArray.count && mShowedImageIndex >= 0) {
+    if(mShowedImageIndex <= mAssetsArray.count && mShowedImageIndex >= 1) {
         
         //change content offset animated
         NSInteger lContentOffset = (IMAGE_CELL_WIDTH + 2 * SPACE_BETWEEN_IMAGES) * (pNext?1:-1);
