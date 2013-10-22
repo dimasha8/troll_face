@@ -61,18 +61,20 @@
     //find Album
     ALAssetsLibrary *lLibrary = [[ALAssetsLibrary alloc] init];
     [lLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-        if ([[group valueForProperty:ALAssetsGroupPropertyName] isEqualToString:pGtoup]) {
-            lPathes = [NSMutableArray new];
-            //get images pathes
-            [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
-                if(result != nil) {
-                    [lPathes addObject:[UIImage imageWithCGImage:[[result defaultRepresentation] fullScreenImage]]];
-                } else {
-                    pBlock(nil, lPathes);
-                }
-            }];
-            
-            *stop = YES;
+        if(group != nil) {
+            if ([[group valueForProperty:ALAssetsGroupPropertyName] isEqualToString:pGtoup]) {
+                lPathes = [NSMutableArray new];
+                //get images pathes
+                [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+                    if(result != nil) {
+                        [lPathes addObject:[UIImage imageWithCGImage:[[result defaultRepresentation] fullScreenImage]]];
+                    }
+                }];
+                
+                *stop = YES;
+            }
+        } else {
+            pBlock(nil, lPathes);
         }
     } failureBlock:^(NSError *error) {
         pBlock(error, lPathes);

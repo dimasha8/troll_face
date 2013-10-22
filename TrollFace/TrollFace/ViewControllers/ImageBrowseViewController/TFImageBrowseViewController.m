@@ -14,6 +14,7 @@
 #define NAVIGATIONBAR_TIME_VISIBLE 3.0
 
 #import "TFImageBrowseViewController.h"
+#import "Settings.h"
 
 @interface TFImageBrowseViewController ()
 
@@ -35,9 +36,6 @@
 {
     [super viewDidLoad];
     
-    mShowedImageIndex = 1;
-    mAllowExecuteScrollDelegate = YES;
-    
     //add long press gesture recognizer
     RNLongPressGestureRecognizer *lRecognizer = [[RNLongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
     [mContentView addGestureRecognizer:lRecognizer];
@@ -49,23 +47,18 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [[Settings sharedSettings] getListOfPhotosInGroup:PHOTO_ALBUM complitionBlock:^(NSError *error, NSArray *imagesPath) {
-        DLog(@"error: %@", error);
-        if(error == nil) {
-            if(imagesPath != nil) {
-                if(imagesPath.count != 0) {
-                    mAssetsArray = [imagesPath copy];
-                    [self setImagesOnScrollView];
-                } else {//there isn't any image in group "Troll friends"
-                    
-                }
-            } else {//group "Troll friends" didn't found
-                
-            }
-        } else {
-            DLog(@"images: %@", imagesPath);
-        }
-    }];
+    //set default values
+    mShowedImageIndex = 1;
+    mAllowExecuteScrollDelegate = YES;
+    mContentView.contentSize = CGSizeZero;
+    mContentView.contentOffset = CGPointZero;
+    
+    //hide tabbar
+    [self.arcTabBar toggleTabBar:nil];
+    
+    //load images
+    [mActivityIndicator startAnimating];
+    [self performSelectorInBackground:@selector(getListOfPhotos) withObject:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -81,6 +74,21 @@
 }
 
 #pragma mark - Private methods
+- (void)getListOfPhotos {
+    [[Settings sharedSettings] getListOfPhotosInGroup:PHOTO_ALBUM complitionBlock:^(NSError *error, NSArray *imagesPath) {
+        DLog(@"error: %@", error);
+        if(error == nil) {
+            mAssetsArray = [imagesPath copy];
+            [self performSelectorOnMainThread:@selector(setImagesOnScrollView) withObject:nil waitUntilDone:NO];
+        } else {
+            DLog(@"images: %@", imagesPath);
+            mInfoLabel.hidden = NO;
+            [mActivityIndicator stopAnimating];
+            mInfoLabel.text = NSLocalizedString(@"Error to get images", nil);
+        }
+    }];
+}
+
 - (void)showHideNavigationBar:(BOOL)pShow; {
     NSTimeInterval lAnimationDuration = pShow?0.1:ANIMATION_DURATION + 0.5;
     [UIView animateWithDuration:lAnimationDuration animations:^{
@@ -94,7 +102,6 @@
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showHideNavigationBar:) object:nil];
         [self performSelector:@selector(showHideNavigationBar:) withObject:(id)NO afterDelay:NAVIGATIONBAR_TIME_VISIBLE];
     }
-    
 }
 
 - (void)showNextImage:(BOOL)pNext {
@@ -117,28 +124,38 @@
 }
 
 - (void)setImagesOnScrollView {
-    for(int i = 0; i < mAssetsArray.count; i++) {
-        NSInteger lImageCellX = mContentView.contentSize.width + SPACE_BETWEEN_IMAGES;
-        UIImageView *lCell = [[UIImageView alloc] initWithFrame:CGRectMake(lImageCellX,
-                                                                           0,
-                                                                           IMAGE_CELL_WIDTH,
-                                                                           mContentView.frame.size.height)];
-        [lCell setContentMode:UIViewContentModeScaleAspectFit];
-        [lCell setBackgroundColor:[UIColor clearColor]];
-        lCell.image = [mAssetsArray objectAtIndex:i];
-        
-        //change content size
-        mContentView.contentSize = CGSizeMake(mContentView.contentSize.width + IMAGE_CELL_WIDTH + SPACE_BETWEEN_IMAGES * 2,
-                                              mContentView.frame.size.height);
-        
-        [mContentView addSubview:lCell];
+    [mContentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    if(mAssetsArray.count != 0) {
+        mInfoLabel.hidden = YES;
+        for(int i = 0; i < mAssetsArray.count; i++) {
+            NSInteger lImageCellX = mContentView.contentSize.width + SPACE_BETWEEN_IMAGES;
+            UIImageView *lCell = [[UIImageView alloc] initWithFrame:CGRectMake(lImageCellX,
+                                                                               0,
+                                                                               IMAGE_CELL_WIDTH,
+                                                                               mContentView.frame.size.height)];
+            [lCell setContentMode:UIViewContentModeScaleAspectFit];
+            [lCell setBackgroundColor:[UIColor clearColor]];
+            lCell.image = [mAssetsArray objectAtIndex:i];
+            
+            //change content size
+            mContentView.contentSize = CGSizeMake(mContentView.contentSize.width + IMAGE_CELL_WIDTH + SPACE_BETWEEN_IMAGES * 2,
+                                                  mContentView.frame.size.height);
+            
+            [mContentView addSubview:lCell];
+        }
+    } else {//there isn't any image in group "Troll friends"
+        mShowedImageIndex = 0;
+        mInfoLabel.hidden = NO;
+        mInfoLabel.text = NSLocalizedString(@"You haven't any saved photos yet", nil);
     }
     
     [self setCountLabelShowedIndex:mShowedImageIndex];
+    [mActivityIndicator stopAnimating];
 }
 
 - (void)setCountLabelShowedIndex:(NSInteger)pIndex {
-    mCountLabel.text = [NSString stringWithFormat:@"%i %@ %i", pIndex, NSLocalizedString(@"of", Nil), mAssetsArray.count];
+    mCountLabel.text = [NSString stringWithFormat:@"%li %@ %lu", (long)pIndex, NSLocalizedString(@"of", Nil), (unsigned long)mAssetsArray.count];
 }
 
 #pragma mark - GridMenu
@@ -197,7 +214,7 @@
 }
 
 #pragma mark - buttons actions
-//navigation bar actions
+#pragma mark - navigation bar actions
 - (IBAction)backButtonPressed:(UIButton *)pSender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -206,7 +223,7 @@
     
 }
 
-//tool bar actions
+#pragma - mark tool bar actions
 - (void)changeImagePressed:(UIButton *)pSender {
     NSInteger lBorderIndex = pSender.tag == 0?1:mAssetsArray.count;
     if(mShowedImageIndex != lBorderIndex) {
@@ -216,6 +233,10 @@
         TFAlertView *lAlert = [[TFAlertView alloc] initInfoViewWithInfo:pSender.tag?@"This is the first image":@"This is the last image" atLocation:TFLocationBottom rootView:self.view];
         [lAlert showAnimating:YES];
     }
+}
+
+- (void)showTabBar:(UIButton *)pSender {
+    [self.arcTabBar toggleTabBar:nil];
 }
 
 @end

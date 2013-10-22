@@ -25,6 +25,8 @@
     [self.window setRootViewController:arcTabViewController];
     [self.window makeKeyAndVisible];
     
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     return YES;
 }
 							

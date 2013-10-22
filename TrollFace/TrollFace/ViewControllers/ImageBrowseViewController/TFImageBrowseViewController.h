@@ -16,6 +16,9 @@
     IBOutlet UIView *mToolBar;
     IBOutlet UILabel *mCountLabel;
     
+    IBOutlet UIActivityIndicatorView *mActivityIndicator;
+    IBOutlet UILabel *mInfoLabel;
+    
     //array of loaded images
     NSArray *mAssetsArray;
     
@@ -35,5 +38,6 @@
 
 //tool bar actions
 - (IBAction)changeImagePressed:(UIButton *)pSender;
+- (IBAction)showTabBar:(UIButton *)pSender;
 
 @end

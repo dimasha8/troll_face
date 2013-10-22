@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArcTabBarController.h"
 
 @interface TFAbstractViewController : UIViewController
+
+@property(nonatomic, weak) ArcTabBarController *arcTabBar;
 
 @end

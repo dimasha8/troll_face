@@ -63,8 +63,7 @@ tabBarBackgroundColor:(UIColor *)tabBarBackgroundColor
     [self setup];
     
     // Create a custom tab bar passing in the number of items
-    CGRect tabBarFrame =
-      (CGRect){{(kKYArcTabViewWidth - tabBarSize_.width) * .5f,
+    CGRect tabBarFrame = (CGRect){{(kKYArcTabViewWidth - tabBarSize_.width) * .5f,
                CGRectGetHeight(self.viewFrame)}, tabBarSize_};
     // Generate tab bar
     tabBar_ = [[KYArcTab alloc] initWithFrame:tabBarFrame
@@ -140,9 +139,9 @@ tabBarBackgroundColor:(UIColor *)tabBarBackgroundColor
   [super viewWillAppear:animated];
   
   // If |tabBar_| is hidden, show it
-  if (isTabBarHide_) [self performSelector:@selector(toggleTabBar:)
-                                withObject:nil
-                                afterDelay:.6f];
+    if (isTabBarHide_) {
+        [self toggleTabBar:nil];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -249,9 +248,9 @@ tabBarBackgroundColor:(UIColor *)tabBarBackgroundColor
                      completion:nil];
   }
   
-  // Add the new view controller's view
-  if ([viewController respondsToSelector:@selector(viewWillAppear:)])
-    [viewController viewWillAppear:NO];
+//  // Add the new view controller's view
+//  if ([viewController respondsToSelector:@selector(viewWillAppear:)])
+//    [viewController viewWillAppear:NO];
   
   [self.view insertSubview:viewController.view belowSubview:self.tabBar];
   

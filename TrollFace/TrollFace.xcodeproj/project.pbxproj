@@ -164,11 +164,11 @@
 		84189E9B1816750500B99894 /* GCPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189DFF1816750500B99894 /* GCPopoverBackgroundView.m */; };
 		84189E9C1816750500B99894 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189E011816750500B99894 /* PhotoCell.m */; };
 		84189E9D1816750500B99894 /* PhotoPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189E031816750500B99894 /* PhotoPickerCell.m */; };
-		84189EB81816750500B99894 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189E211816750500B99894 /* Settings.m */; };
 		8488B2141816F6A40082749F /* KYArcTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B2111816F6A40082749F /* KYArcTab.m */; };
 		8488B2151816F6A40082749F /* KYArcTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B2131816F6A40082749F /* KYArcTabViewController.m */; };
 		8488B2191816F6E60082749F /* KYCircleMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B2181816F6E60082749F /* KYCircleMenu.m */; };
 		8488B21D1816FABA0082749F /* ArcTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B21C1816FABA0082749F /* ArcTabBarController.m */; };
+		8490CD661817097E000BA07E /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8490CD651817097E000BA07E /* Settings.m */; };
 		84BD31C31809FDA700D86F71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C21809FDA700D86F71 /* QuartzCore.framework */; };
 		84BD31C51809FDB000D86F71 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C41809FDB000D86F71 /* Accelerate.framework */; };
 		84C6A9FA181700DE008D0066 /* KYITabBarArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A9F4181700DE008D0066 /* KYITabBarArrow.png */; };
@@ -462,8 +462,6 @@
 		84189E011816750500B99894 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		84189E021816750500B99894 /* PhotoPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerCell.h; sourceTree = "<group>"; };
 		84189E031816750500B99894 /* PhotoPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerCell.m; sourceTree = "<group>"; };
-		84189E201816750500B99894 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
-		84189E211816750500B99894 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		8488B2101816F6A40082749F /* KYArcTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYArcTab.h; sourceTree = "<group>"; };
 		8488B2111816F6A40082749F /* KYArcTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYArcTab.m; sourceTree = "<group>"; };
 		8488B2121816F6A40082749F /* KYArcTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYArcTabViewController.h; sourceTree = "<group>"; };
@@ -472,6 +470,8 @@
 		8488B2181816F6E60082749F /* KYCircleMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCircleMenu.m; sourceTree = "<group>"; };
 		8488B21B1816FABA0082749F /* ArcTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcTabBarController.h; path = ArcTabBar/ArcTabBarController.h; sourceTree = "<group>"; };
 		8488B21C1816FABA0082749F /* ArcTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArcTabBarController.m; path = ArcTabBar/ArcTabBarController.m; sourceTree = "<group>"; };
+		8490CD641817097E000BA07E /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		8490CD651817097E000BA07E /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		84BD31C21809FDA700D86F71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		84BD31C41809FDB000D86F71 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		84C6A9F4181700DE008D0066 /* KYITabBarArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KYITabBarArrow.png; sourceTree = "<group>"; };
@@ -1144,8 +1144,8 @@
 		84189E1F1816750500B99894 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				84189E201816750500B99894 /* Settings.h */,
-				84189E211816750500B99894 /* Settings.m */,
+				8490CD641817097E000BA07E /* Settings.h */,
+				8490CD651817097E000BA07E /* Settings.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1377,7 +1377,6 @@
 				84189E6C1816750500B99894 /* GCLoginView.m in Sources */,
 				84189E7A1816750500B99894 /* GCAlbumViewController.m in Sources */,
 				84189E311816750500B99894 /* GCServiceFlag.m in Sources */,
-				84189EB81816750500B99894 /* Settings.m in Sources */,
 				84189E621816750500B99894 /* GCURL.m in Sources */,
 				84189E4A1816750500B99894 /* DCSimpleConverter.m in Sources */,
 				84189E421816750500B99894 /* DCNSDateConverter.m in Sources */,
@@ -1458,6 +1457,7 @@
 				84189E6D1816750500B99894 /* GCPopupView.m in Sources */,
 				84189E7C1816750500B99894 /* GCPhotoPickerViewController.m in Sources */,
 				84189E3F1816750500B99894 /* DCGenericConverter.m in Sources */,
+				8490CD661817097E000BA07E /* Settings.m in Sources */,
 				8488B2151816F6A40082749F /* KYArcTabViewController.m in Sources */,
 				84189D0E181674C700B99894 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 			);

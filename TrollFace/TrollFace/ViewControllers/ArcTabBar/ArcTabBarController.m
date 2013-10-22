@@ -48,10 +48,14 @@
     self.viewFrame = (CGRect){CGPointZero, {CGRectGetWidth([UIScreen mainScreen].applicationFrame), CGRectGetHeight([UIScreen mainScreen].applicationFrame)}};
     
     // Add child view controllers to each tab
-    ViewController *lMainView   = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    ViewController *lMainView                    = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    
     TFImageBrowseViewController *lImageBrowser   = [[TFImageBrowseViewController alloc] initWithNibName:@"TFImageBrowseViewController" bundle:nil];
-    TFSettingsViewController *lSettings = [[TFSettingsViewController alloc] initWithNibName:@"TFSettingsViewController" bundle:nil];
-    TFHelpViewController *lHelp  = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
+    lImageBrowser.arcTabBar = self;
+    
+    TFSettingsViewController *lSettings          =   [[TFSettingsViewController alloc] initWithNibName:@"TFSettingsViewController" bundle:nil];
+    
+    TFHelpViewController *lHelp                  = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
     
     // Set child views' Frame
     CGRect childViewFrame = self.viewFrame;
