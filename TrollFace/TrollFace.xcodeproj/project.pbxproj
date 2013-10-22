@@ -165,8 +165,18 @@
 		84189E9C1816750500B99894 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189E011816750500B99894 /* PhotoCell.m */; };
 		84189E9D1816750500B99894 /* PhotoPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189E031816750500B99894 /* PhotoPickerCell.m */; };
 		84189EB81816750500B99894 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189E211816750500B99894 /* Settings.m */; };
+		8488B2141816F6A40082749F /* KYArcTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B2111816F6A40082749F /* KYArcTab.m */; };
+		8488B2151816F6A40082749F /* KYArcTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B2131816F6A40082749F /* KYArcTabViewController.m */; };
+		8488B2191816F6E60082749F /* KYCircleMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B2181816F6E60082749F /* KYCircleMenu.m */; };
+		8488B21D1816FABA0082749F /* ArcTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B21C1816FABA0082749F /* ArcTabBarController.m */; };
 		84BD31C31809FDA700D86F71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C21809FDA700D86F71 /* QuartzCore.framework */; };
 		84BD31C51809FDB000D86F71 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C41809FDB000D86F71 /* Accelerate.framework */; };
+		84C6A9FA181700DE008D0066 /* KYITabBarArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A9F4181700DE008D0066 /* KYITabBarArrow.png */; };
+		84C6A9FB181700DE008D0066 /* KYITabBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A9F5181700DE008D0066 /* KYITabBarBackground@2x.png */; };
+		84C6A9FC181700DE008D0066 /* KYTabBarItem01.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A9F6181700DE008D0066 /* KYTabBarItem01.png */; };
+		84C6A9FD181700DE008D0066 /* KYTabBarItem02.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A9F7181700DE008D0066 /* KYTabBarItem02.png */; };
+		84C6A9FE181700DF008D0066 /* KYTabBarItem03.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A9F8181700DE008D0066 /* KYTabBarItem03.png */; };
+		84C6A9FF181700DF008D0066 /* KYTabBarItem04.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A9F9181700DE008D0066 /* KYTabBarItem04.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -454,8 +464,22 @@
 		84189E031816750500B99894 /* PhotoPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerCell.m; sourceTree = "<group>"; };
 		84189E201816750500B99894 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		84189E211816750500B99894 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		8488B2101816F6A40082749F /* KYArcTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYArcTab.h; sourceTree = "<group>"; };
+		8488B2111816F6A40082749F /* KYArcTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYArcTab.m; sourceTree = "<group>"; };
+		8488B2121816F6A40082749F /* KYArcTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYArcTabViewController.h; sourceTree = "<group>"; };
+		8488B2131816F6A40082749F /* KYArcTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYArcTabViewController.m; sourceTree = "<group>"; };
+		8488B2171816F6E60082749F /* KYCircleMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCircleMenu.h; sourceTree = "<group>"; };
+		8488B2181816F6E60082749F /* KYCircleMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCircleMenu.m; sourceTree = "<group>"; };
+		8488B21B1816FABA0082749F /* ArcTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcTabBarController.h; path = ArcTabBar/ArcTabBarController.h; sourceTree = "<group>"; };
+		8488B21C1816FABA0082749F /* ArcTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArcTabBarController.m; path = ArcTabBar/ArcTabBarController.m; sourceTree = "<group>"; };
 		84BD31C21809FDA700D86F71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		84BD31C41809FDB000D86F71 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		84C6A9F4181700DE008D0066 /* KYITabBarArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KYITabBarArrow.png; sourceTree = "<group>"; };
+		84C6A9F5181700DE008D0066 /* KYITabBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYITabBarBackground@2x.png"; sourceTree = "<group>"; };
+		84C6A9F6181700DE008D0066 /* KYTabBarItem01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KYTabBarItem01.png; sourceTree = "<group>"; };
+		84C6A9F7181700DE008D0066 /* KYTabBarItem02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KYTabBarItem02.png; sourceTree = "<group>"; };
+		84C6A9F8181700DE008D0066 /* KYTabBarItem03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KYTabBarItem03.png; sourceTree = "<group>"; };
+		84C6A9F9181700DE008D0066 /* KYTabBarItem04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KYTabBarItem04.png; sourceTree = "<group>"; };
 		84E4955D180380EE007B8E29 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -532,7 +556,7 @@
 				8413367318036BF6003FAC97 /* AppDelegate.m */,
 				8413367E18036BF6003FAC97 /* Images.xcassets */,
 				8413366A18036BF6003FAC97 /* Supporting Files */,
-				84BD31BD1809C70700D86F71 /* Resources */,
+				84C6A9F11817002C008D0066 /* Resources */,
 			);
 			path = TrollFace;
 			sourceTree = "<group>";
@@ -570,6 +594,8 @@
 		84189CB91816743800B99894 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				8488B2161816F6E60082749F /* TFCircleMenu */,
+				8488B20F1816F6A40082749F /* TFArcTabBar */,
 				84189CBA1816743800B99894 /* CanvasView */,
 				84189CBD1816743800B99894 /* TFAlertView */,
 				84189CC01816743800B99894 /* TFGridMenu */,
@@ -607,6 +633,7 @@
 		84189CC61816747300B99894 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8488B21A1816FA7C0082749F /* ArcTabBar */,
 				84189CEE1816747300B99894 /* TFAbstractViewController */,
 				84189CC71816747300B99894 /* CanvasViewController */,
 				84189CCB1816747300B99894 /* CreateMemViewController */,
@@ -1123,19 +1150,62 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		84BD31BD1809C70700D86F71 /* Resources */ = {
+		8488B20F1816F6A40082749F /* TFArcTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				84BD31BE1809C73500D86F71 /* Images */,
+				8488B2101816F6A40082749F /* KYArcTab.h */,
+				8488B2111816F6A40082749F /* KYArcTab.m */,
+				8488B2121816F6A40082749F /* KYArcTabViewController.h */,
+				8488B2131816F6A40082749F /* KYArcTabViewController.m */,
 			);
-			name = Resources;
+			path = TFArcTabBar;
 			sourceTree = "<group>";
 		};
-		84BD31BE1809C73500D86F71 /* Images */ = {
+		8488B2161816F6E60082749F /* TFCircleMenu */ = {
 			isa = PBXGroup;
 			children = (
+				8488B2171816F6E60082749F /* KYCircleMenu.h */,
+				8488B2181816F6E60082749F /* KYCircleMenu.m */,
 			);
-			name = Images;
+			path = TFCircleMenu;
+			sourceTree = "<group>";
+		};
+		8488B21A1816FA7C0082749F /* ArcTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8488B21B1816FABA0082749F /* ArcTabBarController.h */,
+				8488B21C1816FABA0082749F /* ArcTabBarController.m */,
+			);
+			name = ArcTabBar;
+			sourceTree = "<group>";
+		};
+		84C6A9F11817002C008D0066 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84C6A9F21817002C008D0066 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84C6A9F21817002C008D0066 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84C6A9F31817002C008D0066 /* ArcTab_images */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		84C6A9F31817002C008D0066 /* ArcTab_images */ = {
+			isa = PBXGroup;
+			children = (
+				84C6A9F4181700DE008D0066 /* KYITabBarArrow.png */,
+				84C6A9F5181700DE008D0066 /* KYITabBarBackground@2x.png */,
+				84C6A9F6181700DE008D0066 /* KYTabBarItem01.png */,
+				84C6A9F7181700DE008D0066 /* KYTabBarItem02.png */,
+				84C6A9F8181700DE008D0066 /* KYTabBarItem03.png */,
+				84C6A9F9181700DE008D0066 /* KYTabBarItem04.png */,
+			);
+			path = ArcTab_images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1227,19 +1297,24 @@
 				84189E9A1816750500B99894 /* skydrive@2x.png in Resources */,
 				84189D031816747300B99894 /* TFSettingsViewController.xib in Resources */,
 				84189E971816750500B99894 /* popover_arrow.png in Resources */,
+				84C6A9FE181700DF008D0066 /* KYTabBarItem03.png in Resources */,
+				84C6A9FC181700DE008D0066 /* KYTabBarItem01.png in Resources */,
 				84189E991816750500B99894 /* skydrive.png in Resources */,
 				84189E8D1816750500B99894 /* google@2x.png in Resources */,
 				84189E841816750500B99894 /* defaultThumb.png in Resources */,
+				84C6A9FF181700DF008D0066 /* KYTabBarItem04.png in Resources */,
 				84189E831816750500B99894 /* chute.png in Resources */,
 				84189E951816750500B99894 /* picasa.png in Resources */,
 				84189E891816750500B99894 /* flickr.png in Resources */,
 				84189E8E1816750500B99894 /* googledrive.png in Resources */,
+				84C6A9FB181700DE008D0066 /* KYITabBarBackground@2x.png in Resources */,
 				84189E8F1816750500B99894 /* googledrive@2x.png in Resources */,
 				84189E981816750500B99894 /* popover_border.png in Resources */,
 				84189E8C1816750500B99894 /* google.png in Resources */,
 				84189CF61816747300B99894 /* TFCreateNewViewController.xib in Resources */,
 				84189E821816750500B99894 /* camera.png in Resources */,
 				84189CF81816747300B99894 /* TFEmptyMemViewController.xib in Resources */,
+				84C6A9FD181700DE008D0066 /* KYTabBarItem02.png in Resources */,
 				84189CFD1816747300B99894 /* TFHelpViewController.xib in Resources */,
 				84189E961816750500B99894 /* picasa@2x.png in Resources */,
 				84189CF21816747300B99894 /* TFCanvasViewController.xib in Resources */,
@@ -1247,6 +1322,7 @@
 				84189E871816750500B99894 /* facebook.png in Resources */,
 				84189E851816750500B99894 /* dropbox.png in Resources */,
 				84189E8A1816750500B99894 /* flickr@2x.png in Resources */,
+				84C6A9FA181700DE008D0066 /* KYITabBarArrow.png in Resources */,
 				84189CF41816747300B99894 /* TFCreateMemViewController.xib in Resources */,
 				8413366E18036BF6003FAC97 /* InfoPlist.strings in Resources */,
 				84189CFB1816747300B99894 /* TFGraphEditorViewController.xib in Resources */,
@@ -1269,6 +1345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8488B21D1816FABA0082749F /* ArcTabBarController.m in Sources */,
 				84189E5B1816750500B99894 /* GCLinks.m in Sources */,
 				84189E741816750500B99894 /* PhotoPickerClient.m in Sources */,
 				84189E411816750500B99894 /* DCNSArrayConverter.m in Sources */,
@@ -1323,6 +1400,7 @@
 				84189CC31816743800B99894 /* TFCanvasView.m in Sources */,
 				84189CF91816747300B99894 /* TFGraphEditorScrollView.m in Sources */,
 				84189E801816750500B99894 /* GCAccountAssets.m in Sources */,
+				8488B2141816F6A40082749F /* KYArcTab.m in Sources */,
 				84189E401816750500B99894 /* DCKeyValueObjectMapping.m in Sources */,
 				84189E5A1816750500B99894 /* GCImageData.m in Sources */,
 				84189E7E1816750500B99894 /* GCAccount.m in Sources */,
@@ -1356,6 +1434,7 @@
 				84189E241816750500B99894 /* AFImageRequestOperation.m in Sources */,
 				84189E7B1816750500B99894 /* GCAssetsCollectionViewController.m in Sources */,
 				84189E381816750500B99894 /* GetChute.m in Sources */,
+				8488B2191816F6E60082749F /* KYCircleMenu.m in Sources */,
 				84189E251816750500B99894 /* AFJSONRequestOperation.m in Sources */,
 				84189E2C1816750500B99894 /* GCOAuth2Client.m in Sources */,
 				84189E3D1816750500B99894 /* DCDictionaryRearranger.m in Sources */,
@@ -1379,6 +1458,7 @@
 				84189E6D1816750500B99894 /* GCPopupView.m in Sources */,
 				84189E7C1816750500B99894 /* GCPhotoPickerViewController.m in Sources */,
 				84189E3F1816750500B99894 /* DCGenericConverter.m in Sources */,
+				8488B2151816F6A40082749F /* KYArcTabViewController.m in Sources */,
 				84189D0E181674C700B99894 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

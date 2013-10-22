@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "ArcTabBarController.h"
 
 @implementation AppDelegate
 
@@ -15,11 +15,14 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    ViewController *lMain = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    
-    UINavigationController *lController = [[UINavigationController alloc] initWithRootViewController:lMain];
-    
-    [self.window setRootViewController:lController];
+    // Setup root view controller
+    ArcTabBarController * arcTabViewController = [ArcTabBarController alloc];
+    [arcTabViewController initWithTitle:@"KYArcTab"
+                             tabBarSize:(CGSize){CGRectGetWidth([UIScreen mainScreen].applicationFrame), TABBAR_HEIGHT}
+                  tabBarBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"KYITabBarBackground.png"]]
+                               itemSize:(CGSize){ARC_ITEM_SIZE, ARC_ITEM_SIZE}
+                                  arrow:[UIImage imageNamed:@"KYITabBarArrow.png"]];
+    [self.window setRootViewController:arcTabViewController];
     [self.window makeKeyAndVisible];
     
     return YES;
