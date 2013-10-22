@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TFAbstractViewController.h"
+#import "KYCircleMenu.h"
 
-@interface ViewController : TFAbstractViewController
+@interface ViewController : KYCircleMenu
 
 @end

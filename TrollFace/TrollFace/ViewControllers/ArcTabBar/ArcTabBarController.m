@@ -48,14 +48,25 @@
     self.viewFrame = (CGRect){CGPointZero, {CGRectGetWidth([UIScreen mainScreen].applicationFrame), CGRectGetHeight([UIScreen mainScreen].applicationFrame)}};
     
     // Add child view controllers to each tab
-    ViewController *lMainView                    = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    //main(first) controller
+    ViewController *lMainView  = [[ViewController alloc] initWithButtonCount:kKYCCircleMenuButtonsCount
+                                                                    menuSize:kKYCircleMenuSize
+                                                                  buttonSize:kKYCircleMenuButtonSize
+                                                       buttonImageNameFormat:kKYICircleMenuButtonImageNameFormat
+                                                            centerButtonSize:kKYCircleMenuCenterButtonSize
+                                                       centerButtonImageName:kKYICircleMenuCenterButton
+                                             centerButtonBackgroundImageName:kKYICircleMenuCenterButtonBackground];
+    UINavigationController *lMainNavController = [[UINavigationController alloc] initWithRootViewController:lMainView];
     
-    TFImageBrowseViewController *lImageBrowser   = [[TFImageBrowseViewController alloc] initWithNibName:@"TFImageBrowseViewController" bundle:nil];
+    //image browser controller
+    TFImageBrowseViewController *lImageBrowser = [[TFImageBrowseViewController alloc] initWithNibName:@"TFImageBrowseViewController" bundle:nil];
     lImageBrowser.arcTabBar = self;
     
-    TFSettingsViewController *lSettings          =   [[TFSettingsViewController alloc] initWithNibName:@"TFSettingsViewController" bundle:nil];
+    //setings view controller
+    TFSettingsViewController *lSettings = [[TFSettingsViewController alloc] initWithNibName:@"TFSettingsViewController" bundle:nil];
     
-    TFHelpViewController *lHelp                  = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
+    //help view controller
+    TFHelpViewController *lHelp = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
     
     // Set child views' Frame
     CGRect childViewFrame = self.viewFrame;
@@ -72,7 +83,7 @@
     
     // Add child views as tab bar items
     self.tabBarItems = @[@{@"image"          : @"KYTabBarItem01.png",
-                           @"viewController" : lMainView},
+                           @"viewController" : lMainNavController},
                          @{@"image"          : @"KYTabBarItem02.png",
                            @"viewController" : lImageBrowser},
                          @{@"image"          : @"KYTabBarItem03.png",

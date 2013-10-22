@@ -40,7 +40,6 @@
 		84189CFE1816747300B99894 /* TFImageBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CE41816747300B99894 /* TFImageBrowseViewController.m */; };
 		84189CFF1816747300B99894 /* TFImageBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84189CE51816747300B99894 /* TFImageBrowseViewController.xib */; };
 		84189D001816747300B99894 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CE81816747300B99894 /* ViewController.m */; };
-		84189D011816747300B99894 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84189CE91816747300B99894 /* ViewController.xib */; };
 		84189D021816747300B99894 /* TFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CEC1816747300B99894 /* TFSettingsViewController.m */; };
 		84189D031816747300B99894 /* TFSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84189CED1816747300B99894 /* TFSettingsViewController.xib */; };
 		84189D041816747300B99894 /* TFAbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CF01816747300B99894 /* TFAbstractViewController.m */; };
@@ -169,6 +168,14 @@
 		8488B2191816F6E60082749F /* KYCircleMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B2181816F6E60082749F /* KYCircleMenu.m */; };
 		8488B21D1816FABA0082749F /* ArcTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488B21C1816FABA0082749F /* ArcTabBarController.m */; };
 		8490CD661817097E000BA07E /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8490CD651817097E000BA07E /* Settings.m */; };
+		8490CD7918173560000BA07E /* KYICircleMenuButton01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD6918173560000BA07E /* KYICircleMenuButton01@2x.png */; };
+		8490CD7B18173560000BA07E /* KYICircleMenuButton02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD6B18173560000BA07E /* KYICircleMenuButton02@2x.png */; };
+		8490CD7D18173560000BA07E /* KYICircleMenuButton03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD6D18173560000BA07E /* KYICircleMenuButton03@2x.png */; };
+		8490CD7F18173560000BA07E /* KYICircleMenuButton04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD6F18173560000BA07E /* KYICircleMenuButton04@2x.png */; };
+		8490CD8118173560000BA07E /* KYICircleMenuButton05@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7118173560000BA07E /* KYICircleMenuButton05@2x.png */; };
+		8490CD8318173560000BA07E /* KYICircleMenuButton06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7318173560000BA07E /* KYICircleMenuButton06@2x.png */; };
+		8490CD8518173560000BA07E /* KYICircleMenuCenterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7518173560000BA07E /* KYICircleMenuCenterButton@2x.png */; };
+		8490CD8718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png */; };
 		84BD31C31809FDA700D86F71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C21809FDA700D86F71 /* QuartzCore.framework */; };
 		84BD31C51809FDB000D86F71 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C41809FDB000D86F71 /* Accelerate.framework */; };
 		84C6A9FA181700DE008D0066 /* KYITabBarArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A9F4181700DE008D0066 /* KYITabBarArrow.png */; };
@@ -239,7 +246,6 @@
 		84189CE51816747300B99894 /* TFImageBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFImageBrowseViewController.xib; sourceTree = "<group>"; };
 		84189CE71816747300B99894 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		84189CE81816747300B99894 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		84189CE91816747300B99894 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		84189CEB1816747300B99894 /* TFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFSettingsViewController.h; sourceTree = "<group>"; };
 		84189CEC1816747300B99894 /* TFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFSettingsViewController.m; sourceTree = "<group>"; };
 		84189CED1816747300B99894 /* TFSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFSettingsViewController.xib; sourceTree = "<group>"; };
@@ -472,6 +478,14 @@
 		8488B21C1816FABA0082749F /* ArcTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArcTabBarController.m; path = ArcTabBar/ArcTabBarController.m; sourceTree = "<group>"; };
 		8490CD641817097E000BA07E /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		8490CD651817097E000BA07E /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		8490CD6918173560000BA07E /* KYICircleMenuButton01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuButton01@2x.png"; sourceTree = "<group>"; };
+		8490CD6B18173560000BA07E /* KYICircleMenuButton02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuButton02@2x.png"; sourceTree = "<group>"; };
+		8490CD6D18173560000BA07E /* KYICircleMenuButton03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuButton03@2x.png"; sourceTree = "<group>"; };
+		8490CD6F18173560000BA07E /* KYICircleMenuButton04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuButton04@2x.png"; sourceTree = "<group>"; };
+		8490CD7118173560000BA07E /* KYICircleMenuButton05@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuButton05@2x.png"; sourceTree = "<group>"; };
+		8490CD7318173560000BA07E /* KYICircleMenuButton06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuButton06@2x.png"; sourceTree = "<group>"; };
+		8490CD7518173560000BA07E /* KYICircleMenuCenterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuCenterButton@2x.png"; sourceTree = "<group>"; };
+		8490CD7718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuCenterButtonBackground@2x.png"; sourceTree = "<group>"; };
 		84BD31C21809FDA700D86F71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		84BD31C41809FDB000D86F71 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		84C6A9F4181700DE008D0066 /* KYITabBarArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KYITabBarArrow.png; sourceTree = "<group>"; };
@@ -733,7 +747,6 @@
 			children = (
 				84189CE71816747300B99894 /* ViewController.h */,
 				84189CE81816747300B99894 /* ViewController.m */,
-				84189CE91816747300B99894 /* ViewController.xib */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -1179,6 +1192,21 @@
 			name = ArcTabBar;
 			sourceTree = "<group>";
 		};
+		8490CD6718173560000BA07E /* CircleMenu_images */ = {
+			isa = PBXGroup;
+			children = (
+				8490CD6918173560000BA07E /* KYICircleMenuButton01@2x.png */,
+				8490CD6B18173560000BA07E /* KYICircleMenuButton02@2x.png */,
+				8490CD6D18173560000BA07E /* KYICircleMenuButton03@2x.png */,
+				8490CD6F18173560000BA07E /* KYICircleMenuButton04@2x.png */,
+				8490CD7118173560000BA07E /* KYICircleMenuButton05@2x.png */,
+				8490CD7318173560000BA07E /* KYICircleMenuButton06@2x.png */,
+				8490CD7518173560000BA07E /* KYICircleMenuCenterButton@2x.png */,
+				8490CD7718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png */,
+			);
+			path = CircleMenu_images;
+			sourceTree = "<group>";
+		};
 		84C6A9F11817002C008D0066 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1190,6 +1218,7 @@
 		84C6A9F21817002C008D0066 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8490CD6718173560000BA07E /* CircleMenu_images */,
 				84C6A9F31817002C008D0066 /* ArcTab_images */,
 			);
 			path = Images;
@@ -1285,7 +1314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84189E931816750500B99894 /* overlay.png in Resources */,
-				84189D011816747300B99894 /* ViewController.xib in Resources */,
 				84189E8B1816750500B99894 /* GCConfiguration.plist in Resources */,
 				84189E811816750500B99894 /* album_default.png in Resources */,
 				84189E861816750500B99894 /* dropbox@2x.png in Resources */,
@@ -1293,13 +1321,18 @@
 				8413367F18036BF6003FAC97 /* Images.xcassets in Resources */,
 				84189CFF1816747300B99894 /* TFImageBrowseViewController.xib in Resources */,
 				84189E911816750500B99894 /* instagram.png in Resources */,
+				8490CD7B18173560000BA07E /* KYICircleMenuButton02@2x.png in Resources */,
 				84189E941816750500B99894 /* overlay@2x.png in Resources */,
+				8490CD8518173560000BA07E /* KYICircleMenuCenterButton@2x.png in Resources */,
 				84189E9A1816750500B99894 /* skydrive@2x.png in Resources */,
+				8490CD7918173560000BA07E /* KYICircleMenuButton01@2x.png in Resources */,
 				84189D031816747300B99894 /* TFSettingsViewController.xib in Resources */,
+				8490CD8118173560000BA07E /* KYICircleMenuButton05@2x.png in Resources */,
 				84189E971816750500B99894 /* popover_arrow.png in Resources */,
 				84C6A9FE181700DF008D0066 /* KYTabBarItem03.png in Resources */,
 				84C6A9FC181700DE008D0066 /* KYTabBarItem01.png in Resources */,
 				84189E991816750500B99894 /* skydrive.png in Resources */,
+				8490CD8318173560000BA07E /* KYICircleMenuButton06@2x.png in Resources */,
 				84189E8D1816750500B99894 /* google@2x.png in Resources */,
 				84189E841816750500B99894 /* defaultThumb.png in Resources */,
 				84C6A9FF181700DF008D0066 /* KYTabBarItem04.png in Resources */,
@@ -1309,6 +1342,7 @@
 				84189E8E1816750500B99894 /* googledrive.png in Resources */,
 				84C6A9FB181700DE008D0066 /* KYITabBarBackground@2x.png in Resources */,
 				84189E8F1816750500B99894 /* googledrive@2x.png in Resources */,
+				8490CD7D18173560000BA07E /* KYICircleMenuButton03@2x.png in Resources */,
 				84189E981816750500B99894 /* popover_border.png in Resources */,
 				84189E8C1816750500B99894 /* google.png in Resources */,
 				84189CF61816747300B99894 /* TFCreateNewViewController.xib in Resources */,
@@ -1318,10 +1352,12 @@
 				84189CFD1816747300B99894 /* TFHelpViewController.xib in Resources */,
 				84189E961816750500B99894 /* picasa@2x.png in Resources */,
 				84189CF21816747300B99894 /* TFCanvasViewController.xib in Resources */,
+				8490CD8718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png in Resources */,
 				84189E901816750500B99894 /* gradient_blue.png in Resources */,
 				84189E871816750500B99894 /* facebook.png in Resources */,
 				84189E851816750500B99894 /* dropbox.png in Resources */,
 				84189E8A1816750500B99894 /* flickr@2x.png in Resources */,
+				8490CD7F18173560000BA07E /* KYICircleMenuButton04@2x.png in Resources */,
 				84C6A9FA181700DE008D0066 /* KYITabBarArrow.png in Resources */,
 				84189CF41816747300B99894 /* TFCreateMemViewController.xib in Resources */,
 				8413366E18036BF6003FAC97 /* InfoPlist.strings in Resources */,

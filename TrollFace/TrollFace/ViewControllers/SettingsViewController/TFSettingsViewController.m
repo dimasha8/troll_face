@@ -52,7 +52,7 @@
 }
 
 - (void)alertView:(NSInteger)pViewTag didSelectButtonAtIndex:(NSInteger)pButtonIndex {
-    DLog(@"button index: %i", pButtonIndex);
+    DLog(@"button index: %li", (long)pButtonIndex);
 }
 
 @end

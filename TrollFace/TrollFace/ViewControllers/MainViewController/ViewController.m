@@ -16,7 +16,7 @@
 #import "TFCreateMemViewController.h"
 
 @interface ViewController ()
-- (IBAction)navigationButtonPressed:(UIButton *)pSender;
+
 @end
 
 @implementation ViewController
@@ -25,11 +25,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    
+    // Modify buttons' style in circle menu
+    for (UIButton * button in [self.menu subviews])
+        [button setAlpha:.95f];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,41 +37,59 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - IB actions
-- (IBAction)navigationButtonPressed:(UIButton *)pSender {
-    switch (pSender.tag) {
+#pragma mark - KYCircleMenu Button Action
+
+// Run button action depend on their tags:
+//
+// TAG:        1       1   2      1   2     1   2     1 2 3     1 2 3
+//            \|/       \|/        \|/       \|/       \|/       \|/
+// COUNT: 1) --|--  2) --|--   3) --|--  4) --|--  5) --|--  6) --|--
+//            /|\       /|\        /|\       /|\       /|\       /|\
+// TAG:                             3       3   4     4   5     4 5 6
+//
+- (void)runButtonActions:(id)sender {
+    [super runButtonActions:sender];
+    
+    // Configure new view & push it with custom |pushViewController:| method
+    UIViewController * lViewController = [self goToControllerAtIndex:[sender tag]];
+    // Use KYCircleMenu's |-pushViewController:| to push vc
+    if(lViewController != nil) {
+        [self pushViewController:lViewController];
+    }
+}
+
+- (id)goToControllerAtIndex:(NSInteger)pIndex {
+    id lController = nil;
+    switch (pIndex) {
         case 0: {//Create new button
-            TFCreateMemViewController *lController = [[TFCreateMemViewController alloc] initWithNibName:@"TFCreateMemViewController" bundle:nil];
-            [self.navigationController pushViewController:lController animated:YES];
+            lController = [[TFCreateMemViewController alloc] initWithNibName:@"TFCreateMemViewController" bundle:nil];
         }
             break;
             
         case 1: {//show created mems button
-            TFImageBrowseViewController *lController = [[TFImageBrowseViewController alloc] initWithNibName:@"TFImageBrowseViewController" bundle:nil];
-            [self.navigationController pushViewController:lController animated:YES];
+            lController = [[TFImageBrowseViewController alloc] initWithNibName:@"TFImageBrowseViewController" bundle:nil];
         }
             break;
             
         case 2: {//settings button
-            TFSettingsViewController *lController = [[TFSettingsViewController alloc] initWithNibName:@"TFSettingsViewController" bundle:nil];
-            [self.navigationController pushViewController:lController animated:YES];
+            lController = [[TFSettingsViewController alloc] initWithNibName:@"TFSettingsViewController" bundle:nil];
         }
             break;
             
         case 3: {//help button
-            TFHelpViewController *lController = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
-            [self.navigationController pushViewController:lController animated:YES];
+            lController = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
         }
             break;
         case 4:{
-            TFGraphEditorViewController *lGraphEditor = [[TFGraphEditorViewController alloc] initWithNibName:@"TFGraphEditorViewController" bundle:nil];
-            [self.navigationController pushViewController:lGraphEditor animated:YES];
+            lController = [[TFGraphEditorViewController alloc] initWithNibName:@"TFGraphEditorViewController" bundle:nil];
         }
             break;
             
         default:
             break;
     }
+    
+    return lController;
 }
 
 @end
