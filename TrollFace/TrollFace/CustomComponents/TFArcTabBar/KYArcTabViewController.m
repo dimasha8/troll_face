@@ -291,8 +291,11 @@ tabBarBackgroundColor:(UIColor *)tabBarBackgroundColor
 - (void)toggleTabBar:(NSNotification *)notification
 {
   CGRect tabBarFrame = self.tabBar.frame;
-  if (isTabBarHide_) tabBarFrame.origin.y = CGRectGetHeight(self.viewFrame) - tabBarSize_.height;
-  else               tabBarFrame.origin.y = CGRectGetHeight(self.viewFrame);
+    if (isTabBarHide_) {
+        tabBarFrame.origin.y = CGRectGetHeight(self.viewFrame) - tabBarSize_.height;
+    } else {
+        tabBarFrame.origin.y = CGRectGetHeight(self.viewFrame);
+    }
   
   [UIView animateWithDuration:.3f
                         delay:0.f

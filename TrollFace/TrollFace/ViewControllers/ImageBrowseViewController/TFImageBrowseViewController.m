@@ -196,7 +196,7 @@
 
 #pragma mark - GridMenu delegate
 - (void)gridMenu:(RNGridMenu *)gridMenu willDismissWithSelectedItem:(RNGridMenuItem *)item atIndex:(NSInteger)itemIndex {
-    DLog(@"item index: %i", itemIndex);
+    DLog(@"item index: %li", itemIndex);
 }
 
 #pragma mark - User actions

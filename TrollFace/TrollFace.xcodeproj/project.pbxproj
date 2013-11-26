@@ -24,17 +24,6 @@
 		84189CC31816743800B99894 /* TFCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CBC1816743800B99894 /* TFCanvasView.m */; };
 		84189CC41816743800B99894 /* TFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CBF1816743800B99894 /* TFAlertView.m */; };
 		84189CC51816743800B99894 /* RNGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CC21816743800B99894 /* RNGridMenu.m */; };
-		84189CF11816747300B99894 /* TFCanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CC91816747300B99894 /* TFCanvasViewController.m */; };
-		84189CF21816747300B99894 /* TFCanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84189CCA1816747300B99894 /* TFCanvasViewController.xib */; };
-		84189CF31816747300B99894 /* TFCreateMemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CCD1816747300B99894 /* TFCreateMemViewController.m */; };
-		84189CF41816747300B99894 /* TFCreateMemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84189CCE1816747300B99894 /* TFCreateMemViewController.xib */; };
-		84189CF51816747300B99894 /* TFCreateNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CD11816747300B99894 /* TFCreateNewViewController.m */; };
-		84189CF61816747300B99894 /* TFCreateNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84189CD21816747300B99894 /* TFCreateNewViewController.xib */; };
-		84189CF71816747300B99894 /* TFEmptyMemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CD51816747300B99894 /* TFEmptyMemViewController.m */; };
-		84189CF81816747300B99894 /* TFEmptyMemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84189CD61816747300B99894 /* TFEmptyMemViewController.xib */; };
-		84189CF91816747300B99894 /* TFGraphEditorScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CD91816747300B99894 /* TFGraphEditorScrollView.m */; };
-		84189CFA1816747300B99894 /* TFGraphEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CDC1816747300B99894 /* TFGraphEditorViewController.m */; };
-		84189CFB1816747300B99894 /* TFGraphEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84189CDD1816747300B99894 /* TFGraphEditorViewController.xib */; };
 		84189CFC1816747300B99894 /* TFHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CE01816747300B99894 /* TFHelpViewController.m */; };
 		84189CFD1816747300B99894 /* TFHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84189CE11816747300B99894 /* TFHelpViewController.xib */; };
 		84189CFE1816747300B99894 /* TFImageBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189CE41816747300B99894 /* TFImageBrowseViewController.m */; };
@@ -176,6 +165,8 @@
 		8490CD8318173560000BA07E /* KYICircleMenuButton06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7318173560000BA07E /* KYICircleMenuButton06@2x.png */; };
 		8490CD8518173560000BA07E /* KYICircleMenuCenterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7518173560000BA07E /* KYICircleMenuCenterButton@2x.png */; };
 		8490CD8718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png */; };
+		84A1F99A1845505B0020D999 /* TFMainWorkFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1F9981845505B0020D999 /* TFMainWorkFieldViewController.m */; };
+		84A1F99B1845505B0020D999 /* TFMainWorkFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A1F9991845505B0020D999 /* TFMainWorkFieldViewController.xib */; };
 		84BD31C31809FDA700D86F71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C21809FDA700D86F71 /* QuartzCore.framework */; };
 		84BD31C51809FDB000D86F71 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C41809FDB000D86F71 /* Accelerate.framework */; };
 		84C6A9FA181700DE008D0066 /* KYITabBarArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A9F4181700DE008D0066 /* KYITabBarArrow.png */; };
@@ -221,23 +212,6 @@
 		84189CBF1816743800B99894 /* TFAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFAlertView.m; sourceTree = "<group>"; };
 		84189CC11816743800B99894 /* RNGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGridMenu.h; sourceTree = "<group>"; };
 		84189CC21816743800B99894 /* RNGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGridMenu.m; sourceTree = "<group>"; };
-		84189CC81816747300B99894 /* TFCanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCanvasViewController.h; sourceTree = "<group>"; };
-		84189CC91816747300B99894 /* TFCanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCanvasViewController.m; sourceTree = "<group>"; };
-		84189CCA1816747300B99894 /* TFCanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFCanvasViewController.xib; sourceTree = "<group>"; };
-		84189CCC1816747300B99894 /* TFCreateMemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCreateMemViewController.h; sourceTree = "<group>"; };
-		84189CCD1816747300B99894 /* TFCreateMemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCreateMemViewController.m; sourceTree = "<group>"; };
-		84189CCE1816747300B99894 /* TFCreateMemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFCreateMemViewController.xib; sourceTree = "<group>"; };
-		84189CD01816747300B99894 /* TFCreateNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCreateNewViewController.h; sourceTree = "<group>"; };
-		84189CD11816747300B99894 /* TFCreateNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCreateNewViewController.m; sourceTree = "<group>"; };
-		84189CD21816747300B99894 /* TFCreateNewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFCreateNewViewController.xib; sourceTree = "<group>"; };
-		84189CD41816747300B99894 /* TFEmptyMemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFEmptyMemViewController.h; sourceTree = "<group>"; };
-		84189CD51816747300B99894 /* TFEmptyMemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFEmptyMemViewController.m; sourceTree = "<group>"; };
-		84189CD61816747300B99894 /* TFEmptyMemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFEmptyMemViewController.xib; sourceTree = "<group>"; };
-		84189CD81816747300B99894 /* TFGraphEditorScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFGraphEditorScrollView.h; sourceTree = "<group>"; };
-		84189CD91816747300B99894 /* TFGraphEditorScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFGraphEditorScrollView.m; sourceTree = "<group>"; };
-		84189CDB1816747300B99894 /* TFGraphEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFGraphEditorViewController.h; sourceTree = "<group>"; };
-		84189CDC1816747300B99894 /* TFGraphEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFGraphEditorViewController.m; sourceTree = "<group>"; };
-		84189CDD1816747300B99894 /* TFGraphEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFGraphEditorViewController.xib; sourceTree = "<group>"; };
 		84189CDF1816747300B99894 /* TFHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHelpViewController.h; sourceTree = "<group>"; };
 		84189CE01816747300B99894 /* TFHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHelpViewController.m; sourceTree = "<group>"; };
 		84189CE11816747300B99894 /* TFHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFHelpViewController.xib; sourceTree = "<group>"; };
@@ -486,6 +460,9 @@
 		8490CD7318173560000BA07E /* KYICircleMenuButton06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuButton06@2x.png"; sourceTree = "<group>"; };
 		8490CD7518173560000BA07E /* KYICircleMenuCenterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuCenterButton@2x.png"; sourceTree = "<group>"; };
 		8490CD7718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuCenterButtonBackground@2x.png"; sourceTree = "<group>"; };
+		84A1F9971845505B0020D999 /* TFMainWorkFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFMainWorkFieldViewController.h; sourceTree = "<group>"; };
+		84A1F9981845505B0020D999 /* TFMainWorkFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFMainWorkFieldViewController.m; sourceTree = "<group>"; };
+		84A1F9991845505B0020D999 /* TFMainWorkFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFMainWorkFieldViewController.xib; sourceTree = "<group>"; };
 		84BD31C21809FDA700D86F71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		84BD31C41809FDB000D86F71 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		84C6A9F4181700DE008D0066 /* KYITabBarArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KYITabBarArrow.png; sourceTree = "<group>"; };
@@ -647,79 +624,15 @@
 		84189CC61816747300B99894 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84A1F9961845505B0020D999 /* MainWorkFieldViewController */,
 				8488B21A1816FA7C0082749F /* ArcTabBar */,
 				84189CEE1816747300B99894 /* TFAbstractViewController */,
-				84189CC71816747300B99894 /* CanvasViewController */,
-				84189CCB1816747300B99894 /* CreateMemViewController */,
-				84189CCF1816747300B99894 /* CreateNewViewController */,
-				84189CD31816747300B99894 /* EmptyMemViewController */,
-				84189CD71816747300B99894 /* GraphEditorScrollView */,
-				84189CDA1816747300B99894 /* GraphEditorViewController */,
 				84189CDE1816747300B99894 /* HelpViewController */,
 				84189CE21816747300B99894 /* ImageBrowseViewController */,
 				84189CEA1816747300B99894 /* SettingsViewController */,
 				84189CE61816747300B99894 /* MainViewController */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		84189CC71816747300B99894 /* CanvasViewController */ = {
-			isa = PBXGroup;
-			children = (
-				84189CC81816747300B99894 /* TFCanvasViewController.h */,
-				84189CC91816747300B99894 /* TFCanvasViewController.m */,
-				84189CCA1816747300B99894 /* TFCanvasViewController.xib */,
-			);
-			path = CanvasViewController;
-			sourceTree = "<group>";
-		};
-		84189CCB1816747300B99894 /* CreateMemViewController */ = {
-			isa = PBXGroup;
-			children = (
-				84189CCC1816747300B99894 /* TFCreateMemViewController.h */,
-				84189CCD1816747300B99894 /* TFCreateMemViewController.m */,
-				84189CCE1816747300B99894 /* TFCreateMemViewController.xib */,
-			);
-			path = CreateMemViewController;
-			sourceTree = "<group>";
-		};
-		84189CCF1816747300B99894 /* CreateNewViewController */ = {
-			isa = PBXGroup;
-			children = (
-				84189CD01816747300B99894 /* TFCreateNewViewController.h */,
-				84189CD11816747300B99894 /* TFCreateNewViewController.m */,
-				84189CD21816747300B99894 /* TFCreateNewViewController.xib */,
-			);
-			path = CreateNewViewController;
-			sourceTree = "<group>";
-		};
-		84189CD31816747300B99894 /* EmptyMemViewController */ = {
-			isa = PBXGroup;
-			children = (
-				84189CD41816747300B99894 /* TFEmptyMemViewController.h */,
-				84189CD51816747300B99894 /* TFEmptyMemViewController.m */,
-				84189CD61816747300B99894 /* TFEmptyMemViewController.xib */,
-			);
-			path = EmptyMemViewController;
-			sourceTree = "<group>";
-		};
-		84189CD71816747300B99894 /* GraphEditorScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				84189CD81816747300B99894 /* TFGraphEditorScrollView.h */,
-				84189CD91816747300B99894 /* TFGraphEditorScrollView.m */,
-			);
-			path = GraphEditorScrollView;
-			sourceTree = "<group>";
-		};
-		84189CDA1816747300B99894 /* GraphEditorViewController */ = {
-			isa = PBXGroup;
-			children = (
-				84189CDB1816747300B99894 /* TFGraphEditorViewController.h */,
-				84189CDC1816747300B99894 /* TFGraphEditorViewController.m */,
-				84189CDD1816747300B99894 /* TFGraphEditorViewController.xib */,
-			);
-			path = GraphEditorViewController;
 			sourceTree = "<group>";
 		};
 		84189CDE1816747300B99894 /* HelpViewController */ = {
@@ -1207,6 +1120,16 @@
 			path = CircleMenu_images;
 			sourceTree = "<group>";
 		};
+		84A1F9961845505B0020D999 /* MainWorkFieldViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84A1F9971845505B0020D999 /* TFMainWorkFieldViewController.h */,
+				84A1F9981845505B0020D999 /* TFMainWorkFieldViewController.m */,
+				84A1F9991845505B0020D999 /* TFMainWorkFieldViewController.xib */,
+			);
+			path = MainWorkFieldViewController;
+			sourceTree = "<group>";
+		};
 		84C6A9F11817002C008D0066 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1338,6 +1261,7 @@
 				84C6A9FF181700DF008D0066 /* KYTabBarItem04.png in Resources */,
 				84189E831816750500B99894 /* chute.png in Resources */,
 				84189E951816750500B99894 /* picasa.png in Resources */,
+				84A1F99B1845505B0020D999 /* TFMainWorkFieldViewController.xib in Resources */,
 				84189E891816750500B99894 /* flickr.png in Resources */,
 				84189E8E1816750500B99894 /* googledrive.png in Resources */,
 				84C6A9FB181700DE008D0066 /* KYITabBarBackground@2x.png in Resources */,
@@ -1345,13 +1269,10 @@
 				8490CD7D18173560000BA07E /* KYICircleMenuButton03@2x.png in Resources */,
 				84189E981816750500B99894 /* popover_border.png in Resources */,
 				84189E8C1816750500B99894 /* google.png in Resources */,
-				84189CF61816747300B99894 /* TFCreateNewViewController.xib in Resources */,
 				84189E821816750500B99894 /* camera.png in Resources */,
-				84189CF81816747300B99894 /* TFEmptyMemViewController.xib in Resources */,
 				84C6A9FD181700DE008D0066 /* KYTabBarItem02.png in Resources */,
 				84189CFD1816747300B99894 /* TFHelpViewController.xib in Resources */,
 				84189E961816750500B99894 /* picasa@2x.png in Resources */,
-				84189CF21816747300B99894 /* TFCanvasViewController.xib in Resources */,
 				8490CD8718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png in Resources */,
 				84189E901816750500B99894 /* gradient_blue.png in Resources */,
 				84189E871816750500B99894 /* facebook.png in Resources */,
@@ -1359,9 +1280,7 @@
 				84189E8A1816750500B99894 /* flickr@2x.png in Resources */,
 				8490CD7F18173560000BA07E /* KYICircleMenuButton04@2x.png in Resources */,
 				84C6A9FA181700DE008D0066 /* KYITabBarArrow.png in Resources */,
-				84189CF41816747300B99894 /* TFCreateMemViewController.xib in Resources */,
 				8413366E18036BF6003FAC97 /* InfoPlist.strings in Resources */,
-				84189CFB1816747300B99894 /* TFGraphEditorViewController.xib in Resources */,
 				84189E881816750500B99894 /* facebook@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1389,7 +1308,6 @@
 				84189E761816750500B99894 /* NSDictionary+ALAsset.m in Sources */,
 				8413367418036BF6003FAC97 /* AppDelegate.m in Sources */,
 				84189E2A1816750500B99894 /* UIImageView+AFNetworking.m in Sources */,
-				84189CF51816747300B99894 /* TFCreateNewViewController.m in Sources */,
 				84189E4E1816750500B99894 /* GCApiLimits.m in Sources */,
 				84189E2D1816750500B99894 /* GCUploader.m in Sources */,
 				84189E3B1816750500B99894 /* DCCustomInitialize.m in Sources */,
@@ -1407,7 +1325,6 @@
 				84189E651816750500B99894 /* GCVoteCount.m in Sources */,
 				84189E7D1816750500B99894 /* PhotoPickerViewController.m in Sources */,
 				84189E751816750500B99894 /* GCServiceAccount.m in Sources */,
-				84189CF31816747300B99894 /* TFCreateMemViewController.m in Sources */,
 				84189E551816750500B99894 /* GCFile.m in Sources */,
 				84189E9B1816750500B99894 /* GCPopoverBackgroundView.m in Sources */,
 				84189E6C1816750500B99894 /* GCLoginView.m in Sources */,
@@ -1418,6 +1335,7 @@
 				84189E421816750500B99894 /* DCNSDateConverter.m in Sources */,
 				84189E501816750500B99894 /* GCAssetDimensions.m in Sources */,
 				84189E6A1816750500B99894 /* NSMutableDictionary+GCUtil.m in Sources */,
+				84A1F99A1845505B0020D999 /* TFMainWorkFieldViewController.m in Sources */,
 				84189E361816750500B99894 /* NSDictionary+GCAccountAsset.m in Sources */,
 				84189E7F1816750500B99894 /* GCAccountAlbum.m in Sources */,
 				84189E331816750500B99894 /* GCServiceTag.m in Sources */,
@@ -1433,7 +1351,6 @@
 				84189CFC1816747300B99894 /* TFHelpViewController.m in Sources */,
 				84189E4F1816750500B99894 /* GCAsset.m in Sources */,
 				84189CC31816743800B99894 /* TFCanvasView.m in Sources */,
-				84189CF91816747300B99894 /* TFGraphEditorScrollView.m in Sources */,
 				84189E801816750500B99894 /* GCAccountAssets.m in Sources */,
 				8488B2141816F6A40082749F /* KYArcTab.m in Sources */,
 				84189E401816750500B99894 /* DCKeyValueObjectMapping.m in Sources */,
@@ -1441,7 +1358,6 @@
 				84189E7E1816750500B99894 /* GCAccount.m in Sources */,
 				84189E2E1816750500B99894 /* GCServiceAlbum.m in Sources */,
 				84189E671816750500B99894 /* GCMD5Hash.c in Sources */,
-				84189CFA1816747300B99894 /* TFGraphEditorViewController.m in Sources */,
 				84189E571816750500B99894 /* GCFlagCount.m in Sources */,
 				84189E5F1816750500B99894 /* GCUploadInfo.m in Sources */,
 				84189E391816750500B99894 /* DCArrayMapping.m in Sources */,
@@ -1455,7 +1371,6 @@
 				84189E221816750500B99894 /* AFHTTPClient.m in Sources */,
 				84189E581816750500B99894 /* GCHeart.m in Sources */,
 				84189E6B1816750500B99894 /* NSString+QueryString.m in Sources */,
-				84189CF11816747300B99894 /* TFCanvasViewController.m in Sources */,
 				84189E791816750500B99894 /* GCAccountMediaViewController.m in Sources */,
 				84189E481816750500B99894 /* DCPropertyFinder.m in Sources */,
 				84189CC51816743800B99894 /* RNGridMenu.m in Sources */,
@@ -1464,7 +1379,6 @@
 				84189E341816750500B99894 /* GCServiceVote.m in Sources */,
 				84189E281816750500B99894 /* AFURLConnectionOperation.m in Sources */,
 				84189E461816750500B99894 /* DCParserConfiguration.m in Sources */,
-				84189CF71816747300B99894 /* TFEmptyMemViewController.m in Sources */,
 				84189E601816750500B99894 /* GCUploadingAsset.m in Sources */,
 				84189E241816750500B99894 /* AFImageRequestOperation.m in Sources */,
 				84189E7B1816750500B99894 /* GCAssetsCollectionViewController.m in Sources */,

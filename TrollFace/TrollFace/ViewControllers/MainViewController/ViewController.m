@@ -7,13 +7,10 @@
 //
 
 #import "ViewController.h"
-
-#import "TFCreateNewViewController.h"
 #import "TFImageBrowseViewController.h"
 #import "TFSettingsViewController.h"
 #import "TFHelpViewController.h"
-#import "TFGraphEditorViewController.h"
-#import "TFCreateMemViewController.h"
+#import "TFMainWorkFieldViewController.h"
 
 @interface ViewController ()
 
@@ -27,8 +24,9 @@
     [super viewDidLoad];
     
     // Modify buttons' style in circle menu
-    for (UIButton * button in [self.menu subviews])
+    for (UIButton * button in [self.menu subviews]){
         [button setAlpha:.95f];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,32 +57,33 @@
 }
 
 - (id)goToControllerAtIndex:(NSInteger)pIndex {
-    id lController = nil;
+    TFAbstractViewController *lController = nil;
     switch (pIndex) {
-        case 0: {//Create new button
-            lController = [[TFCreateMemViewController alloc] initWithNibName:@"TFCreateMemViewController" bundle:nil];
-        }
+        case 1: {//Create new button
+            lController = [[TFMainWorkFieldViewController alloc] initWithNibName:@"TFMainWorkFieldViewController" bundle:nil];
+            lController.arcTabBar = self.arcTabBar;
             break;
-            
-        case 1: {//show created mems button
+        }
+        case 2: {//show created mems button
             lController = [[TFImageBrowseViewController alloc] initWithNibName:@"TFImageBrowseViewController" bundle:nil];
-        }
             break;
-            
-        case 2: {//settings button
+        }
+        case 3: {//settings button
             lController = [[TFSettingsViewController alloc] initWithNibName:@"TFSettingsViewController" bundle:nil];
-        }
             break;
-            
-        case 3: {//help button
+        }
+        case 4: {//help button
             lController = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
-        }
             break;
-        case 4:{
-            lController = [[TFGraphEditorViewController alloc] initWithNibName:@"TFGraphEditorViewController" bundle:nil];
         }
+        case 5:{
+
             break;
+        }
+        case 6:{
             
+            break;
+        }
         default:
             break;
     }

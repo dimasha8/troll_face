@@ -56,6 +56,7 @@
                                                             centerButtonSize:kKYCircleMenuCenterButtonSize
                                                        centerButtonImageName:kKYICircleMenuCenterButton
                                              centerButtonBackgroundImageName:kKYICircleMenuCenterButtonBackground];
+    lMainView.arcTabBar = self;
     UINavigationController *lMainNavController = [[UINavigationController alloc] initWithRootViewController:lMainView];
     
     //image browser controller
@@ -64,9 +65,11 @@
     
     //setings view controller
     TFSettingsViewController *lSettings = [[TFSettingsViewController alloc] initWithNibName:@"TFSettingsViewController" bundle:nil];
+    lSettings.arcTabBar = self;
     
     //help view controller
     TFHelpViewController *lHelp = [[TFHelpViewController alloc] initWithNibName:@"TFHelpViewController" bundle:nil];
+    lHelp.arcTabBar = self;
     
     // Set child views' Frame
     CGRect childViewFrame = self.viewFrame;
