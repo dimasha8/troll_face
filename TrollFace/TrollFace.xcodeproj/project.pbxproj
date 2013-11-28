@@ -165,6 +165,7 @@
 		8490CD8318173560000BA07E /* KYICircleMenuButton06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7318173560000BA07E /* KYICircleMenuButton06@2x.png */; };
 		8490CD8518173560000BA07E /* KYICircleMenuCenterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7518173560000BA07E /* KYICircleMenuCenterButton@2x.png */; };
 		8490CD8718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8490CD7718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png */; };
+		84969BD31846B904001BBEE1 /* TFTextSetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84969BD21846B904001BBEE1 /* TFTextSetterView.m */; };
 		84A1F99A1845505B0020D999 /* TFMainWorkFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1F9981845505B0020D999 /* TFMainWorkFieldViewController.m */; };
 		84A1F99B1845505B0020D999 /* TFMainWorkFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A1F9991845505B0020D999 /* TFMainWorkFieldViewController.xib */; };
 		84BD31C31809FDA700D86F71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD31C21809FDA700D86F71 /* QuartzCore.framework */; };
@@ -460,6 +461,8 @@
 		8490CD7318173560000BA07E /* KYICircleMenuButton06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuButton06@2x.png"; sourceTree = "<group>"; };
 		8490CD7518173560000BA07E /* KYICircleMenuCenterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuCenterButton@2x.png"; sourceTree = "<group>"; };
 		8490CD7718173560000BA07E /* KYICircleMenuCenterButtonBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KYICircleMenuCenterButtonBackground@2x.png"; sourceTree = "<group>"; };
+		84969BD11846B904001BBEE1 /* TFTextSetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFTextSetterView.h; path = TrollFace/ViewControllers/TextSetterView/TFTextSetterView.h; sourceTree = SOURCE_ROOT; };
+		84969BD21846B904001BBEE1 /* TFTextSetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFTextSetterView.m; path = TrollFace/ViewControllers/TextSetterView/TFTextSetterView.m; sourceTree = SOURCE_ROOT; };
 		84A1F9971845505B0020D999 /* TFMainWorkFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFMainWorkFieldViewController.h; sourceTree = "<group>"; };
 		84A1F9981845505B0020D999 /* TFMainWorkFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFMainWorkFieldViewController.m; sourceTree = "<group>"; };
 		84A1F9991845505B0020D999 /* TFMainWorkFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFMainWorkFieldViewController.xib; sourceTree = "<group>"; };
@@ -1120,12 +1123,22 @@
 			path = CircleMenu_images;
 			sourceTree = "<group>";
 		};
+		84969BD41846B908001BBEE1 /* TextSetterView */ = {
+			isa = PBXGroup;
+			children = (
+				84969BD11846B904001BBEE1 /* TFTextSetterView.h */,
+				84969BD21846B904001BBEE1 /* TFTextSetterView.m */,
+			);
+			name = TextSetterView;
+			sourceTree = "<group>";
+		};
 		84A1F9961845505B0020D999 /* MainWorkFieldViewController */ = {
 			isa = PBXGroup;
 			children = (
 				84A1F9971845505B0020D999 /* TFMainWorkFieldViewController.h */,
 				84A1F9981845505B0020D999 /* TFMainWorkFieldViewController.m */,
 				84A1F9991845505B0020D999 /* TFMainWorkFieldViewController.xib */,
+				84969BD41846B908001BBEE1 /* TextSetterView */,
 			);
 			path = MainWorkFieldViewController;
 			sourceTree = "<group>";
@@ -1300,6 +1313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84969BD31846B904001BBEE1 /* TFTextSetterView.m in Sources */,
 				8488B21D1816FABA0082749F /* ArcTabBarController.m in Sources */,
 				84189E5B1816750500B99894 /* GCLinks.m in Sources */,
 				84189E741816750500B99894 /* PhotoPickerClient.m in Sources */,

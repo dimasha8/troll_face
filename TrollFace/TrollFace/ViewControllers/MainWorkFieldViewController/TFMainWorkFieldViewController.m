@@ -87,12 +87,10 @@
     RNLongPressGestureRecognizer *lLongPressGesture = [[RNLongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     [mBackroundScrollView addGestureRecognizer:lLongPressGesture];
 
-//    UIPinchGestureRecognizer *lPinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
-//    [mBackroundScrollView addGestureRecognizer:lPinchGesture];
-//    
-//    UITapGestureRecognizer *lTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-//    lTapGesture.delegate = self;
-//    [self.view addGestureRecognizer:lTapGesture];
+    UIPinchGestureRecognizer *lPinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
+    [mBackroundScrollView addGestureRecognizer:lPinchGesture];
+ 
+
 }
 
 - (void)addGridMenuAtPoint:(CGPoint)pPoint{
@@ -169,12 +167,6 @@
     }
 }
 
-- (void)handleTap:(UITapGestureRecognizer*)pGesture{
-    if(pGesture.state == UIGestureRecognizerStateEnded) {
-        [self.arcTabBar toggleTabBar:nil];
-    }
-}
-
 - (void)handlePinch:(UIPinchGestureRecognizer*)pGesture{
     [mBackroundScrollView setZoomScale:pGesture.scale animated:YES];
 //        DLog(@"pinch scale: %f",pGesture.scale);
@@ -229,15 +221,15 @@
 
 #pragma mark - bottom menu handlers
 
-- (IBAction)okButtonPressed:(id)sender{
+- (IBAction)addImageButtonPressed:(id)sender{
     
 }
 
-- (IBAction)cancelButtonPressed:(id)sender{
+- (IBAction)addTextButtonPressed:(id)sender{
     
 }
 
-- (IBAction)handButtonPressed:(id)sender{
+- (IBAction)undoButtonPressed:(id)sender{
     [mBackroundScrollView setScrollEnabled:NO];
 }
 

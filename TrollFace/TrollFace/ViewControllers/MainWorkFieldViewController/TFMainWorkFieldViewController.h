@@ -21,6 +21,8 @@
     IBOutlet UIView *mRightView;
     IBOutlet UIView *mTopView;
     IBOutlet UIView *mBottomMenuView;
+    IBOutlet UIView *mTextSetterView;
+    IBOutlet UITextField *mTextField;
 }
 #pragma mark - init methods
 - (id)initEmptyWithNibName:(NSString *)nibNameOrNil;

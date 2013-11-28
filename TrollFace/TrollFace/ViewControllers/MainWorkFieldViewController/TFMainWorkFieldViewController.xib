@@ -43,18 +43,18 @@
                         <outlet property="delegate" destination="-1" id="cHF-Cu-hor"/>
                     </connections>
                 </scrollView>
-                <view contentMode="scaleToFill" id="ei4-0w-khY">
+                <view hidden="YES" contentMode="scaleToFill" id="ei4-0w-khY">
                     <rect key="frame" x="320" y="80" width="50" height="338"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
                 </view>
-                <view contentMode="scaleToFill" id="fVm-mm-yvp">
+                <view hidden="YES" contentMode="scaleToFill" id="fVm-mm-yvp">
                     <rect key="frame" x="-50" y="80" width="50" height="250"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" id="S5O-0v-th2">
+                <view hidden="YES" contentMode="scaleToFill" id="S5O-0v-th2">
                     <rect key="frame" x="35" y="-50" width="250" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -66,31 +66,31 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LMf-sf-VOt">
                             <rect key="frame" x="14" y="13" width="68" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Ok">
+                            <state key="normal" title="Add Img">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="PNA-8T-JLP"/>
+                                <action selector="addImageButtonPressed:" destination="-1" eventType="touchUpInside" id="cHb-cQ-wtW"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="owy-zU-pMv">
                             <rect key="frame" x="80" y="13" width="72" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Cancel">
+                            <state key="normal" title="Add Text">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="bIJ-ms-4gE"/>
+                                <action selector="addTextButtonPressed:" destination="-1" eventType="touchUpInside" id="FAz-6g-uhA"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9rM-bf-9yk">
                             <rect key="frame" x="175" y="13" width="56" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Hand">
+                            <state key="normal" title="Undo">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="handButtonPressed:" destination="-1" eventType="touchUpInside" id="aD7-KN-poX"/>
+                                <action selector="undoButtonPressed:" destination="-1" eventType="touchUpInside" id="Bve-BU-oSk"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F0p-KT-L8c">
@@ -100,7 +100,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="showButtonPressed:" destination="-1" eventType="touchUpInside" id="zl3-pf-C3p"/>
+                                <action selector="showButtonPressed:" destination="-1" eventType="touchUpInside" id="aR4-Vv-18q"/>
                             </connections>
                         </button>
                     </subviews>
